@@ -11,60 +11,40 @@
       background-color: #f9f9f9;
       text-align: center;
       padding: 50px;
+      line-height: 1.8;
     }
     h1 {
       color: #4a148c;
-      margin-bottom: 20px;
     }
-    .flags {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 30px;
-      margin-top: 30px;
+    ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 40px;
     }
-    .flag-link {
+    li {
+      margin: 15px 0;
+      font-size: 1.5rem;
+    }
+    a {
       text-decoration: none;
       color: #333;
-      font-size: 1.2rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 100px;
+      font-weight: bold;
+      margin-right: 10px;
     }
-    .flag-link img {
-      width: 64px;
-      height: 48px;
-      border-radius: 4px;
-      margin-bottom: 10px;
-      border: 1px solid #ccc;
+    a:hover {
+      color: #6a1b9a;
     }
   </style>
 </head>
 <body>
   <h1>Welcome to Horia</h1>
-  <p>Please select your language:</p>
-  <div class="flags">
-    <a href="index.fa.html" class="flag-link">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Derafsh_Kaviani_flag.svg/1280px-Derafsh_Kaviani_flag.svg.png" alt="Persian Flag">
-      فارسی
-    </a>
-    <a href="index.en.html" class="flag-link">
-      <img src="https://flagcdn.com/w80/gb.png" alt="English Flag">
-      English
-    </a>
-    <a href="index.fr.html" class="flag-link">
-      <img src="https://flagcdn.com/w80/fr.png" alt="French Flag">
-      Français
-    </a>
-    <a href="index.es.html" class="flag-link">
-      <img src="https://flagcdn.com/w80/es.png" alt="Spanish Flag">
-      Español
-    </a>
-    <a href="index.ar.html" class="flag-link">
-      <img src="https://flagcdn.com/w80/ae.png" alt="Arabic Flag">
-      العربية
-    </a>
-  </div>
+  <p>Please choose your language:</p>
+  <ul>
+    <li>🌀 <a href="index.fa.html">فارسی</a></li>
+    <li>🇬🇧 <a href="index.en.html">English</a></li>
+    <li>🇫🇷 <a href="index.fr.html">Français</a></li>
+    <li>🇪🇸 <a href="index.es.html">Español</a></li>
+    <li>🇦🇪 <a href="index.ar.html">العربية</a></li>
+  </ul>
 </body>
 </html>
