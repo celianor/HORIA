@@ -4,13 +4,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Horia - Language Selection</title>
+  <title>Horia - Home</title>
   <style>
     body {
       font-family: sans-serif;
       text-align: center;
       padding: 50px;
-      background-color: #f5f5f5;
+      background-color: #f0f0f0;
     }
     h1 {
       color: #4a148c;
@@ -25,8 +25,8 @@
 <body>
   <h1>Welcome to Horia</h1>
   <p>Please select your language:</p>
-  <select onchange="location = this.value;">
-    <option value="#">-- Choose Language --</option>
+  <select onchange="if(this.value) window.location.href=this.value;">
+    <option value="">-- Choose Language --</option>
     <option value="index.fa.html">فارسی</option>
     <option value="index.en.html">English</option>
     <option value="index.fr.html">Français</option>
