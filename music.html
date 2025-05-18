@@ -38,15 +38,20 @@
       display: block;
     }
 
-    .toggle-btn {
+    .toggle-btn, .back-btn {
       font-size: 2rem;
       background: rgba(0,0,0,0.4);
       border: none;
       border-radius: 10px;
       color: white;
       padding: 10px 20px;
-      margin-top: 40px;
+      margin: 30px 10px;
       cursor: pointer;
+      text-decoration: none;
+    }
+
+    .toggle-btn:hover, .back-btn:hover {
+      background: rgba(0,0,0,0.7);
     }
   </style>
 </head>
@@ -65,6 +70,7 @@
 
   <div>
     <button onclick="toggleMusic()" id="music-btn" class="toggle-btn">🔊</button>
+    <a href="index.html" class="back-btn">⬅️</a>
   </div>
 
   <script>
