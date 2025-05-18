@@ -1,55 +1,37 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Horia - A Home for All</title>
-    <style>
-        body { font-family: sans-serif; text-align: center; padding: 50px; }
-        .lang-selector { position: absolute; top: 20px; right: 20px; }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Horia - Language Selection</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      padding: 50px;
+      background-color: #f5f5f5;
+    }
+    h1 {
+      color: #4a148c;
+    }
+    select {
+      font-size: 1.2rem;
+      padding: 10px;
+      margin-top: 20px;
+    }
+  </style>
 </head>
 <body>
-    <div class="lang-selector">
-        <select onchange="changeLang(this.value)">
-            <option value="en">English</option>
-            <option value="fa">فارسی</option>
-            <option value="fr">Français</option>
-            <option value="es">Español</option>
-            <option value="ar">العربية</option>
-        </select>
-    </div>
-
-    <h1 id="title">Welcome to Horia</h1>
-    <p id="description">A world of kindness, freedom, and wisdom.</p>
-
-    <script>
-        const texts = {
-            en: {
-                title: "Welcome to Horia",
-                description: "A world of kindness, freedom, and wisdom."
-            },
-            fa: {
-                title: "به هوریا خوش آمدید",
-                description: "جهانی از مهربانی، آزادی و خرد."
-            },
-            fr: {
-                title: "Bienvenue à Horia",
-                description: "Un monde de bonté, de liberté et de sagesse."
-            },
-            es: {
-                title: "Bienvenido a Horia",
-                description: "Un mundo de bondad, libertad y sabiduría."
-            },
-            ar: {
-                title: "مرحبًا بكم في هوريا",
-                description: "عالم من اللطف والحرية والحكمة."
-            }
-        };
-
-        function changeLang(lang) {
-            document.getElementById("title").innerText = texts[lang].title;
-            document.getElementById("description").innerText = texts[lang].description;
-        }
-    </script>
+  <h1>Welcome to Horia</h1>
+  <p>Please select your language:</p>
+  <select onchange="location = this.value;">
+    <option value="#">-- Choose Language --</option>
+    <option value="index.fa.html">فارسی</option>
+    <option value="index.en.html">English</option>
+    <option value="index.fr.html">Français</option>
+    <option value="index.es.html">Español</option>
+    <option value="index.ar.html">العربية</option>
+  </select>
 </body>
 </html>
