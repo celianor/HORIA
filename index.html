@@ -4,34 +4,67 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Horia - Home</title>
+  <title>Horia - Choose Language</title>
   <style>
     body {
       font-family: sans-serif;
+      background-color: #f9f9f9;
       text-align: center;
       padding: 50px;
-      background-color: #f0f0f0;
     }
     h1 {
       color: #4a148c;
+      margin-bottom: 20px;
     }
-    select {
+    .flags {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin-top: 30px;
+    }
+    .flag-link {
+      text-decoration: none;
+      color: #333;
       font-size: 1.2rem;
-      padding: 10px;
-      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100px;
+    }
+    .flag-link img {
+      width: 64px;
+      height: 48px;
+      border-radius: 4px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
     }
   </style>
 </head>
 <body>
   <h1>Welcome to Horia</h1>
   <p>Please select your language:</p>
-  <select onchange="if(this.value) window.location.href=this.value;">
-    <option value="">-- Choose Language --</option>
-    <option value="index.fa.html">فارسی</option>
-    <option value="index.en.html">English</option>
-    <option value="index.fr.html">Français</option>
-    <option value="index.es.html">Español</option>
-    <option value="index.ar.html">العربية</option>
-  </select>
+  <div class="flags">
+    <a href="index.fa.html" class="flag-link">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Derafsh_Kaviani_flag.svg/1280px-Derafsh_Kaviani_flag.svg.png" alt="Persian Flag">
+      فارسی
+    </a>
+    <a href="index.en.html" class="flag-link">
+      <img src="https://flagcdn.com/w80/gb.png" alt="English Flag">
+      English
+    </a>
+    <a href="index.fr.html" class="flag-link">
+      <img src="https://flagcdn.com/w80/fr.png" alt="French Flag">
+      Français
+    </a>
+    <a href="index.es.html" class="flag-link">
+      <img src="https://flagcdn.com/w80/es.png" alt="Spanish Flag">
+      Español
+    </a>
+    <a href="index.ar.html" class="flag-link">
+      <img src="https://flagcdn.com/w80/ae.png" alt="Arabic Flag">
+      العربية
+    </a>
+  </div>
 </body>
 </html>
