@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <title>هوریا - موسیقی آرام</title>
+  <style>
+    body {
+      font-family: Tahoma, sans-serif;
+      background-color: #f4f4f4;
+      text-align: center;
+      padding: 50px;
+      line-height: 1.8;
+    }
+    h1 {
+      color: #4a148c;
+    }
+    select, button {
+      font-size: 1.2rem;
+      padding: 8px 12px;
+      margin: 20px;
+      border-radius: 5px;
+      border: 1px solid #999;
+    }
+    button {
+      cursor: pointer;
+    }
+    a {
+      display: block;
+      margin-top: 40px;
+      font-size: 1rem;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <h1>موسیقی آرامش‌بخش هوریا</h1>
+  <p>یکی از صداها را انتخاب کنید:</p>
+
+  <audio id="bg-music" autoplay loop>
+    <source src="music/1.mp3" type="audio/mpeg" />
+  </audio>
+
+  <select id="music-select" onchange="changeMusic()">
+    <option value="1">فایل ۱</option>
+    <option value="2">فایل ۲</option>
+  </select>
+
+  <button onclick="toggleMusic()" id="music-btn">🔊</button>
+
+  <a href="index.html">⬅️ بازگشت به صفحه اصلی</a>
+
+  <script>
+    const music = document.getElementById("bg-music");
+    const btn = document.getElementById("music-btn");
+    const select = document.getElementById("music-select");
+    let isPlaying = true;
+
+    function toggleMusic() {
+      if (isPlaying) {
+        music.pause();
+        btn.textContent = "🔇";
+      } else {
+        music.play();
+        btn.textContent = "🔊";
+      }
+      isPlaying = !isPlaying;
+    }
+
+    function changeMusic() {
+      const choice = select.value;
+      music.src = `music/${choice}.mp3`;
+      music.load();
+      if (isPlaying) music.play();
+    }
+  </script>
+</body>
+</html>
