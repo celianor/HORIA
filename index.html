@@ -1,56 +1,55 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Horia - Choose Language</title>
-  <style>
-    body {
-      font-family: sans-serif;
-      background-image: url('img/horia_background.jpg');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      padding: 50px;
-      text-align: center;
-      line-height: 1.8;
-      color: #fff;
-      text-shadow: 1px 1px 4px #000;
-    }
-    h1 {
-      color: #ffe082;
-    }
-    ul {
-      list-style: none;
-      padding: 0;
-      margin-top: 40px;
-    }
-    li {
-      margin: 15px 0;
-      font-size: 1.5rem;
-    }
-    a {
-      text-decoration: none;
-      color: #fff;
-      font-weight: bold;
-      margin-right: 10px;
-    }
-    a:hover {
-      color: #ffd54f;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <title>Horia - A Home for All</title>
+    <style>
+        body { font-family: sans-serif; text-align: center; padding: 50px; }
+        .lang-selector { position: absolute; top: 20px; right: 20px; }
+    </style>
 </head>
 <body>
-  <h1>Welcome to Horia</h1>
-  <p>Please choose your language:</p>
-  <ul>
-    <li>🇬🇧 <a href="index.en.html">English</a></li>
-    <li>🇫🇷 <a href="index.fr.html">Français</a></li>
-    <li>🇪🇸 <a href="index.es.html">Español</a></li>
-    <li>🇦🇪 <a href="index.ar.html">العربية</a></li>
-    <li>🌸 <a href="index.fa.html">فارسی</a></li>
-  </ul>
+    <div class="lang-selector">
+        <select onchange="changeLang(this.value)">
+            <option value="en">English</option>
+            <option value="fa">فارسی</option>
+            <option value="fr">Français</option>
+            <option value="es">Español</option>
+            <option value="ar">العربية</option>
+        </select>
+    </div>
+
+    <h1 id="title">Welcome to Horia</h1>
+    <p id="description">A world of kindness, freedom, and wisdom.</p>
+
+    <script>
+        const texts = {
+            en: {
+                title: "Welcome to Horia",
+                description: "A world of kindness, freedom, and wisdom."
+            },
+            fa: {
+                title: "به هوریا خوش آمدید",
+                description: "جهانی از مهربانی، آزادی و خرد."
+            },
+            fr: {
+                title: "Bienvenue à Horia",
+                description: "Un monde de bonté, de liberté et de sagesse."
+            },
+            es: {
+                title: "Bienvenido a Horia",
+                description: "Un mundo de bondad, libertad y sabiduría."
+            },
+            ar: {
+                title: "مرحبًا بكم في هوريا",
+                description: "عالم من اللطف والحرية والحكمة."
+            }
+        };
+
+        function changeLang(lang) {
+            document.getElementById("title").innerText = texts[lang].title;
+            document.getElementById("description").innerText = texts[lang].description;
+        }
+    </script>
 </body>
 </html>
