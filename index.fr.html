@@ -1,109 +1,43 @@
-
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
 <head>
   <meta charset="UTF-8" />
-  <title>Horia - Français</title>
+  <title>Accueil – Horia</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <style>
     body {
       font-family: sans-serif;
-      margin: 0;
-      padding: 40px;
-      background: url('img/horia_background.jpg') no-repeat center center fixed;
-      background-size: cover;
-      color: #fff;
-      text-shadow: 1px 1px 4px #000;
-    }
-    .content {
-      background-color: rgba(0, 0, 0, 0.4);
-      padding: 30px;
-      border-radius: 16px;
-      max-width: 800px;
-      margin: auto;
-      line-height: 2;
-      font-size: 1.2rem;
-    }
-    .back-link {
-      display: block;
+      background: #f9f9f9;
+      padding: 2rem;
       text-align: center;
-      margin-top: 40px;
-      font-size: 2rem;
-      color: white;
+      color: #333;
+    }
+    nav {
+      margin-bottom: 2rem;
+    }
+    nav a {
+      margin: 0 1rem;
       text-decoration: none;
+      color: #0057b8;
+      font-weight: bold;
     }
-    .music-bar {
-      position: fixed;
-      bottom: 10px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: rgba(0, 0, 0, 0.6);
-      padding: 12px 20px;
-      border-radius: 14px;
-      box-shadow: 0 0 10px #000;
-      z-index: 9999;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    .music-bar select, .music-bar button {
-      font-size: 1.2rem;
-      padding: 6px 12px;
-      border: none;
-      border-radius: 8px;
-      background: #fff;
-      color: #000;
-      cursor: pointer;
+    h1 {
+      font-size: 2rem;
+      margin-top: 2rem;
     }
   </style>
 </head>
 <body>
-  <div class="content">
-    
-<h1>Horia</h1>
-<p>Horia est un chemin de sagesse, de bonté et d’espoir.</p>
-<p>La vie se déroule en trois mondes : avant la naissance, maintenant, et après la mort. Et chaque être humain peut être porteur de lumière.</p>
-<p>Dans Horia, il n’y a pas de place pour la violence, l’humiliation ou la haine. La bonté, la connaissance, la joie, l’amitié et la dignité sont les piliers.</p>
 
-    <a class="back-link" href="index.html">⬅️</a>
-  </div>
+<nav>
+  <a href="index.fr.html">Accueil</a>
+  <a href="philosophy.fr.html">Philosophie</a>
+  <a href="music.html">Musique</a>
+  <a href="contact.html">Contact</a>
+  <a href="faq.fr.html">FAQ</a>
+</nav>
 
-  <div class="music-bar">
-    <select id="music-select-bar" onchange="changeMusicBar()">
-      <option value="1">🎵</option>
-      <option value="2">🎶</option>
-      <option value="Ney">🪈</option>
-    </select>
-    <button onclick="toggleMusicBar()" id="music-toggle-btn">🔊</button>
-  </div>
+<h1>Bienvenue à Horia</h1>
 
-  <audio id="music-audio-bar" autoplay loop>
-    <source src="music/1.mp3" type="audio/mpeg" />
-  </audio>
-
-  <script>
-    const musicBar = document.getElementById("music-audio-bar");
-    const btnBar = document.getElementById("music-toggle-btn");
-    let playingBar = true;
-
-    function toggleMusicBar() {
-      if (playingBar) {
-        musicBar.pause();
-        btnBar.textContent = "🔇";
-      } else {
-        musicBar.play();
-        btnBar.textContent = "🔊";
-      }
-      playingBar = !playingBar;
-    }
-
-    function changeMusicBar() {
-      const selected = document.getElementById("music-select-bar").value;
-      let file = selected === "Ney" ? "Ney.mp3" : selected + ".mp3";
-      musicBar.src = "music/" + file;
-      musicBar.load();
-      if (playingBar) musicBar.play();
-    }
-  </script>
 </body>
 </html>
