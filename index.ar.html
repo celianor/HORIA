@@ -72,6 +72,7 @@
     <select id="music-select-bar" onchange="changeMusicBar()">
       <option value="1">🎵</option>
       <option value="2">🎶</option>
+      <option value="Ney">🪈</option>
     </select>
     <button onclick="toggleMusicBar()" id="music-toggle-btn">🔊</button>
   </div>
@@ -98,7 +99,8 @@
 
     function changeMusicBar() {
       const selected = document.getElementById("music-select-bar").value;
-      musicBar.src = "music/" + selected + ".mp3";
+      let file = selected === "Ney" ? "Ney.mp3" : selected + ".mp3";
+      musicBar.src = "music/" + file;
       musicBar.load();
       if (playingBar) musicBar.play();
     }

@@ -1,54 +1,36 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Horia - Choose Language</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <style>
     body {
       font-family: sans-serif;
-      background-image: url('img/horia_background.jpg');
+      margin: 0;
+      padding: 40px;
+      background: url('img/horia_background.jpg') no-repeat center center fixed;
       background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      padding: 50px;
-      text-align: center;
       color: #fff;
       text-shadow: 1px 1px 4px #000;
     }
-    h1 {
-      color: #ffe082;
+    .content {
+      background-color: rgba(0, 0, 0, 0.4);
+      padding: 30px;
+      border-radius: 16px;
+      max-width: 800px;
+      margin: auto;
+      line-height: 2;
+      font-size: 1.2rem;
     }
-    ul {
-      list-style: none;
-      padding: 0;
+    .back-link {
+      display: block;
+      text-align: center;
       margin-top: 40px;
-    }
-    li {
-      margin: 15px 0;
-      font-size: 1.5rem;
-    }
-    a {
+      font-size: 2rem;
+      color: white;
       text-decoration: none;
-      color: #fff;
-      font-weight: bold;
-    }
-    a:hover {
-      color: #ffd54f;
-    }
-    .music-button {
-      position: fixed;
-      bottom: 90px;
-      right: 20px;
-      font-size: 3rem;
-      background: rgba(255,255,255,0.2);
-      border: none;
-      border-radius: 12px;
-      padding: 10px;
-      cursor: pointer;
-      color: #fff;
     }
     .music-bar {
       position: fixed;
@@ -76,22 +58,25 @@
   </style>
 </head>
 <body>
-  <h1>Welcome to Horia</h1>
-  <ul>
-    <li>🇬🇧 <a href="index.en.html">English</a></li>
-    <li>🇫🇷 <a href="index.fr.html">Français</a></li>
-    <li>🇪🇸 <a href="index.es.html">Español</a></li>
-    <li>🇦🇪 <a href="index.ar.html">العربية</a></li>
-    <li>🌸 <a href="index.fa.html">فارسی</a></li>
-  </ul>
+  <div class="content">
+    
+<h1>Welcome to Horia</h1>
+<ul style='list-style: none; padding: 0; font-size: 1.5rem;'>
+  <li>🇬🇧 <a href="index.en.html">English</a></li>
+  <li>🇫🇷 <a href="index.fr.html">Français</a></li>
+  <li>🇪🇸 <a href="index.es.html">Español</a></li>
+  <li>🇦🇪 <a href="index.ar.html">العربية</a></li>
+  <li>🌸 <a href="index.fa.html">فارسی</a></li>
+</ul>
 
-  <a href="music.html" class="music-button" title="Music">🎵</a>
+    <a class="back-link" href="index.html">⬅️</a>
+  </div>
 
-  <!-- نوار موسیقی جهانی -->
   <div class="music-bar">
     <select id="music-select-bar" onchange="changeMusicBar()">
       <option value="1">🎵</option>
       <option value="2">🎶</option>
+      <option value="Ney">🪈</option>
     </select>
     <button onclick="toggleMusicBar()" id="music-toggle-btn">🔊</button>
   </div>
@@ -118,7 +103,8 @@
 
     function changeMusicBar() {
       const selected = document.getElementById("music-select-bar").value;
-      musicBar.src = "music/" + selected + ".mp3";
+      let file = selected === "Ney" ? "Ney.mp3" : selected + ".mp3";
+      musicBar.src = "music/" + file;
       musicBar.load();
       if (playingBar) musicBar.play();
     }
