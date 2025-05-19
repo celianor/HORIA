@@ -40,7 +40,7 @@
     }
     .music-button {
       position: fixed;
-      bottom: 80px;
+      bottom: 90px;
       right: 20px;
       font-size: 3rem;
       background: rgba(255,255,255,0.2);
@@ -49,6 +49,29 @@
       padding: 10px;
       cursor: pointer;
       color: #fff;
+    }
+    .music-bar {
+      position: fixed;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(0, 0, 0, 0.6);
+      padding: 12px 20px;
+      border-radius: 14px;
+      box-shadow: 0 0 10px #000;
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .music-bar select, .music-bar button {
+      font-size: 1.2rem;
+      padding: 6px 12px;
+      border: none;
+      border-radius: 8px;
+      background: #fff;
+      color: #000;
+      cursor: pointer;
     }
   </style>
 </head>
@@ -64,70 +87,41 @@
 
   <a href="music.html" class="music-button" title="Music">🎵</a>
 
-  <!-- نوار موسیقی -->
-  
-<!-- نوار موسیقی مشترک برای درج در همه صفحات -->
-<style>
-  .music-bar {
-    position: fixed;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: rgba(0, 0, 0, 0.6);
-    padding: 12px 20px;
-    border-radius: 14px;
-    box-shadow: 0 0 10px #000;
-    z-index: 9999;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  .music-bar select, .music-bar button {
-    font-size: 1.2rem;
-    padding: 6px 12px;
-    border: none;
-    border-radius: 8px;
-    background: #fff;
-    color: #000;
-    cursor: pointer;
-  }
-</style>
+  <!-- نوار موسیقی جهانی -->
+  <div class="music-bar">
+    <select id="music-select-bar" onchange="changeMusicBar()">
+      <option value="1">🎵</option>
+      <option value="2">🎶</option>
+    </select>
+    <button onclick="toggleMusicBar()" id="music-toggle-btn">🔊</button>
+  </div>
 
-<div class="music-bar">
-  <select id="music-select-bar" onchange="changeMusicBar()">
-    <option value="1">🎵 طبیعت</option>
-    <option value="2">🎹 پیانو</option>
-  </select>
-  <button onclick="toggleMusicBar()" id="music-toggle-btn">🔊</button>
-</div>
+  <audio id="music-audio-bar" autoplay loop>
+    <source src="music/1.mp3" type="audio/mpeg" />
+  </audio>
 
-<audio id="music-audio-bar" autoplay loop>
-  <source src="music/1.mp3" type="audio/mpeg" />
-</audio>
+  <script>
+    const musicBar = document.getElementById("music-audio-bar");
+    const btnBar = document.getElementById("music-toggle-btn");
+    let playingBar = true;
 
-<script>
-  const musicBar = document.getElementById("music-audio-bar");
-  const btnBar = document.getElementById("music-toggle-btn");
-  let playingBar = true;
-
-  function toggleMusicBar() {
-    if (playingBar) {
-      musicBar.pause();
-      btnBar.textContent = "🔇";
-    } else {
-      musicBar.play();
-      btnBar.textContent = "🔊";
+    function toggleMusicBar() {
+      if (playingBar) {
+        musicBar.pause();
+        btnBar.textContent = "🔇";
+      } else {
+        musicBar.play();
+        btnBar.textContent = "🔊";
+      }
+      playingBar = !playingBar;
     }
-    playingBar = !playingBar;
-  }
 
-  function changeMusicBar() {
-    const selected = document.getElementById("music-select-bar").value;
-    musicBar.src = "music/" + selected + ".mp3";
-    musicBar.load();
-    if (playingBar) musicBar.play();
-  }
-</script>
-
+    function changeMusicBar() {
+      const selected = document.getElementById("music-select-bar").value;
+      musicBar.src = "music/" + selected + ".mp3";
+      musicBar.load();
+      if (playingBar) musicBar.play();
+    }
+  </script>
 </body>
 </html>
