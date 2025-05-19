@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <title>Horia - Music</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <style>
     body {
       font-family: sans-serif;
@@ -32,26 +33,26 @@
     }
 
     .music-option img {
-      width: 240px;
-      height: 240px;
+      width: 220px;
+      height: 220px;
       object-fit: cover;
       display: block;
     }
 
     .toggle-btn, .back-btn {
-      font-size: 4rem;
-      background: rgba(0,0,0,0.6);
+      font-size: 3rem;
+      background: rgba(0,0,0,0.5);
       border: none;
-      border-radius: 25px;
+      border-radius: 20px;
       color: white;
-      padding: 25px 35px;
-      margin: 50px 20px;
+      padding: 20px 30px;
+      margin: 40px 15px;
       cursor: pointer;
       text-decoration: none;
     }
 
     .toggle-btn:hover, .back-btn:hover {
-      background: rgba(0,0,0,0.75);
+      background: rgba(0,0,0,0.7);
     }
   </style>
 </head>
@@ -66,6 +67,10 @@
 
   <div class="music-option" onclick="changeMusic('2')">
     <img src="img/piano_icon.jpg.JPG" alt="Piano Sound" title="Piano Sound">
+  </div>
+
+  <div class="music-option" onclick="changeMusic('Ney')">
+    <img src="img/ney_icon.jpg.JPG" alt="Ney Sound" title="Ney Sound">
   </div>
 
   <div>
@@ -90,7 +95,8 @@
     }
 
     function changeMusic(track) {
-      music.src = `music/${track}.mp3`;
+      let file = track === "Ney" ? "Ney.mp3" : track + ".mp3";
+      music.src = `music/${file}`;
       music.load();
       if (isPlaying) music.play();
     }
