@@ -24,6 +24,37 @@
       line-height: 2;
       font-size: 1.2rem;
     }
+    .back-link {
+      display: block;
+      text-align: center;
+      margin-top: 40px;
+      font-size: 2rem;
+      color: white;
+      text-decoration: none;
+    }
+    .music-bar {
+      position: fixed;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(0, 0, 0, 0.6);
+      padding: 12px 20px;
+      border-radius: 14px;
+      box-shadow: 0 0 10px #000;
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .music-bar select, .music-bar button {
+      font-size: 1.2rem;
+      padding: 6px 12px;
+      border: none;
+      border-radius: 8px;
+      background: #fff;
+      color: #000;
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
@@ -34,71 +65,43 @@
 <p>Life unfolds in three realms: before birth, now, and after death. Every human being can be a bearer of light.</p>
 <p>In Horia, there is no place for violence, humiliation, or discrimination. Goodness, knowledge, joy, friendship, and dignity are core values.</p>
 
+    <a class="back-link" href="index.html">⬅️</a>
   </div>
 
-  
-<!-- نوار موسیقی مشترک برای درج در همه صفحات -->
-<style>
-  .music-bar {
-    position: fixed;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: rgba(0, 0, 0, 0.6);
-    padding: 12px 20px;
-    border-radius: 14px;
-    box-shadow: 0 0 10px #000;
-    z-index: 9999;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  .music-bar select, .music-bar button {
-    font-size: 1.2rem;
-    padding: 6px 12px;
-    border: none;
-    border-radius: 8px;
-    background: #fff;
-    color: #000;
-    cursor: pointer;
-  }
-</style>
+  <div class="music-bar">
+    <select id="music-select-bar" onchange="changeMusicBar()">
+      <option value="1">🎵</option>
+      <option value="2">🎶</option>
+    </select>
+    <button onclick="toggleMusicBar()" id="music-toggle-btn">🔊</button>
+  </div>
 
-<div class="music-bar">
-  <select id="music-select-bar" onchange="changeMusicBar()">
-    <option value="1">🎵 طبیعت</option>
-    <option value="2">🎹 پیانو</option>
-  </select>
-  <button onclick="toggleMusicBar()" id="music-toggle-btn">🔊</button>
-</div>
+  <audio id="music-audio-bar" autoplay loop>
+    <source src="music/1.mp3" type="audio/mpeg" />
+  </audio>
 
-<audio id="music-audio-bar" autoplay loop>
-  <source src="music/1.mp3" type="audio/mpeg" />
-</audio>
+  <script>
+    const musicBar = document.getElementById("music-audio-bar");
+    const btnBar = document.getElementById("music-toggle-btn");
+    let playingBar = true;
 
-<script>
-  const musicBar = document.getElementById("music-audio-bar");
-  const btnBar = document.getElementById("music-toggle-btn");
-  let playingBar = true;
-
-  function toggleMusicBar() {
-    if (playingBar) {
-      musicBar.pause();
-      btnBar.textContent = "🔇";
-    } else {
-      musicBar.play();
-      btnBar.textContent = "🔊";
+    function toggleMusicBar() {
+      if (playingBar) {
+        musicBar.pause();
+        btnBar.textContent = "🔇";
+      } else {
+        musicBar.play();
+        btnBar.textContent = "🔊";
+      }
+      playingBar = !playingBar;
     }
-    playingBar = !playingBar;
-  }
 
-  function changeMusicBar() {
-    const selected = document.getElementById("music-select-bar").value;
-    musicBar.src = "music/" + selected + ".mp3";
-    musicBar.load();
-    if (playingBar) musicBar.play();
-  }
-</script>
-
+    function changeMusicBar() {
+      const selected = document.getElementById("music-select-bar").value;
+      musicBar.src = "music/" + selected + ".mp3";
+      musicBar.load();
+      if (playingBar) musicBar.play();
+    }
+  </script>
 </body>
 </html>
