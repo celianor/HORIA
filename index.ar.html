@@ -1,51 +1,104 @@
+
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <title>هوريا</title>
+  <meta charset="UTF-8" />
+  <title>هوريا - العربية</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <style>
     body {
-      font-family: Tahoma, sans-serif;
+      font-family: sans-serif;
       margin: 0;
-      padding: 0;
-      line-height: 2;
-      color: #222;
-      position: relative;
-    }
-    .background {
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
+      padding: 40px;
       background: url('img/horia_background.jpg') no-repeat center center fixed;
       background-size: cover;
-      opacity: 0.07;
-      pointer-events: none;
+      color: #fff;
+      text-shadow: 1px 1px 4px #000;
     }
     .content {
-      padding: 60px 20px;
-      text-align: center;
+      background-color: rgba(0, 0, 0, 0.4);
+      padding: 30px;
+      border-radius: 16px;
+      max-width: 800px;
+      margin: auto;
+      line-height: 2;
+      font-size: 1.2rem;
     }
-    h1 { color: #4a148c; }
-    h2 { color: #6a1b9a; }
-    a { color: #00796b; text-decoration: none; margin-left: 10px; }
   </style>
 </head>
 <body>
-  <div class="background"></div>
   <div class="content">
     
-<p><a href="index.html">⬅️ العودة إلى الصفحة الرئيسية</a></p>
 <h1>هوريا</h1>
-<p>هوريا هي محاولة لبناء بيت لجميع البشر - مكان للتفكر والمحبة وتحسين العالم.</p>
-<h2>اللغات</h2>
-<a href="index.html">العودة لاختيار اللغة</a>
-<h2>هدفنا</h2>
-<p>نؤمن أن الحكمة الجماعية، والرحمة، والحرية، والسعي لتقليل المعاناة يمكن أن تفتح طريقًا جديدًا للعيش.</p>
-<h2>انضم إلينا</h2>
-<p>هوريا لا تتبع أي جهة سياسية أو دينية أو اقتصادية. من أي مكان أتيت، إن كنت تسعى للحق والرحمة، فأهلًا بك.</p>
+<p>هوريا طريق الحكمة والرحمة والأمل.</p>
+<p>تتجلى الحياة في ثلاثة عوالم: قبل الولادة، والآن، وما بعد الموت. وكل إنسان يمكن أن يكون حاملًا للنور.</p>
+<p>في هوريا، لا مكان للعنف أو الإذلال أو التمييز. الخير والمعرفة والفرح والصداقة والكرامة هي الأساس.</p>
 
   </div>
+
+  
+<!-- نوار موسیقی مشترک برای درج در همه صفحات -->
+<style>
+  .music-bar {
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.6);
+    padding: 12px 20px;
+    border-radius: 14px;
+    box-shadow: 0 0 10px #000;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .music-bar select, .music-bar button {
+    font-size: 1.2rem;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 8px;
+    background: #fff;
+    color: #000;
+    cursor: pointer;
+  }
+</style>
+
+<div class="music-bar">
+  <select id="music-select-bar" onchange="changeMusicBar()">
+    <option value="1">🎵 طبیعت</option>
+    <option value="2">🎹 پیانو</option>
+  </select>
+  <button onclick="toggleMusicBar()" id="music-toggle-btn">🔊</button>
+</div>
+
+<audio id="music-audio-bar" autoplay loop>
+  <source src="music/1.mp3" type="audio/mpeg" />
+</audio>
+
+<script>
+  const musicBar = document.getElementById("music-audio-bar");
+  const btnBar = document.getElementById("music-toggle-btn");
+  let playingBar = true;
+
+  function toggleMusicBar() {
+    if (playingBar) {
+      musicBar.pause();
+      btnBar.textContent = "🔇";
+    } else {
+      musicBar.play();
+      btnBar.textContent = "🔊";
+    }
+    playingBar = !playingBar;
+  }
+
+  function changeMusicBar() {
+    const selected = document.getElementById("music-select-bar").value;
+    musicBar.src = "music/" + selected + ".mp3";
+    musicBar.load();
+    if (playingBar) musicBar.play();
+  }
+</script>
+
 </body>
 </html>

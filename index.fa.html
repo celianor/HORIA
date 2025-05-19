@@ -2,53 +2,101 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <title>هوریا</title>
+  <meta charset="UTF-8" />
+  <title>هوریا - فارسی</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <style>
     body {
       font-family: Tahoma, sans-serif;
       margin: 0;
-      padding: 0;
-      line-height: 2;
-      color: #222;
-      position: relative;
-    }
-    .background {
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
+      padding: 40px;
       background: url('img/horia_background.jpg') no-repeat center center fixed;
       background-size: cover;
-      opacity: 0.07;
-      pointer-events: none;
+      color: #fff;
+      text-shadow: 1px 1px 4px #000;
     }
     .content {
-      padding: 60px 20px;
-      text-align: center;
+      background-color: rgba(0, 0, 0, 0.4);
+      padding: 30px;
+      border-radius: 16px;
+      max-width: 800px;
+      margin: auto;
+      line-height: 2;
+      font-size: 1.2rem;
     }
-    h1 { color: #4a148c; }
-    h2 { color: #6a1b9a; }
-    a { color: #00796b; text-decoration: none; margin-left: 10px; }
   </style>
 </head>
 <body>
-  <div class="background"></div>
   <div class="content">
-    <p><a href="index.html">⬅️ بازگشت به صفحهٔ اصلی</a></p>
-
-    <h1>هوریا</h1>
-    <p>هوریا کوششی‌ست برای ساختن خانه‌ای برای همهٔ انسان‌ها، جایی برای اندیشیدن، مهر ورزیدن و بهتر کردن جهان.</p>
-
-    <h2>زبان‌ها</h2>
-    <a href="index.html">بازگشت به انتخاب زبان</a>
-
-    <h2>هدف ما</h2>
-    <p>ما بر این باوریم که خرد جمعی، مهربانی، آزادی، و تلاش برای کاستن از رنج، می‌توانند راهی نو برای زیستن بیافرینند.</p>
-
-    <h2>با ما همراه شوید</h2>
-    <p>هوریا وابسته به هیچ نهاد سیاسی، دینی یا اقتصادی نیست. از هر کجای جهان که باشید، اگر دل در گرو راستی و مهربانی دارید، خوش آمدید.</p>
+    <h1>آیین هوریا</h1>
+    <p>هوریا راهی‌ست برای زیستن با خرد، مهربانی و امید.</p>
+    <p>ما زندگی را در سه جهان می‌بینیم: پیش از تولد، اکنون، و پس از مرگ. و همه‌ی انسان‌ها، می‌توانند پیام‌آوران روشنایی باشند.</p>
+    <p>در هوریا، خشونت، تحقیر، و تبعیض جایی ندارد. نیکی، دانایی، شادی، دوستی و کرامت، بنیادند.</p>
   </div>
+
+  
+<!-- نوار موسیقی مشترک برای درج در همه صفحات -->
+<style>
+  .music-bar {
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.6);
+    padding: 12px 20px;
+    border-radius: 14px;
+    box-shadow: 0 0 10px #000;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .music-bar select, .music-bar button {
+    font-size: 1.2rem;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 8px;
+    background: #fff;
+    color: #000;
+    cursor: pointer;
+  }
+</style>
+
+<div class="music-bar">
+  <select id="music-select-bar" onchange="changeMusicBar()">
+    <option value="1">🎵 طبیعت</option>
+    <option value="2">🎹 پیانو</option>
+  </select>
+  <button onclick="toggleMusicBar()" id="music-toggle-btn">🔊</button>
+</div>
+
+<audio id="music-audio-bar" autoplay loop>
+  <source src="music/1.mp3" type="audio/mpeg" />
+</audio>
+
+<script>
+  const musicBar = document.getElementById("music-audio-bar");
+  const btnBar = document.getElementById("music-toggle-btn");
+  let playingBar = true;
+
+  function toggleMusicBar() {
+    if (playingBar) {
+      musicBar.pause();
+      btnBar.textContent = "🔇";
+    } else {
+      musicBar.play();
+      btnBar.textContent = "🔊";
+    }
+    playingBar = !playingBar;
+  }
+
+  function changeMusicBar() {
+    const selected = document.getElementById("music-select-bar").value;
+    musicBar.src = "music/" + selected + ".mp3";
+    musicBar.load();
+    if (playingBar) musicBar.play();
+  }
+</script>
+
 </body>
 </html>

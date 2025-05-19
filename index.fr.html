@@ -1,51 +1,104 @@
+
 <!DOCTYPE html>
-<html lang="fr" >
+<html lang="fr" dir="ltr">
 <head>
-  <meta charset="UTF-8">
-  <title>Horia</title>
+  <meta charset="UTF-8" />
+  <title>Horia - Français</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <style>
     body {
-      font-family: Tahoma, sans-serif;
+      font-family: sans-serif;
       margin: 0;
-      padding: 0;
-      line-height: 2;
-      color: #222;
-      position: relative;
-    }
-    .background {
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
+      padding: 40px;
       background: url('img/horia_background.jpg') no-repeat center center fixed;
       background-size: cover;
-      opacity: 0.07;
-      pointer-events: none;
+      color: #fff;
+      text-shadow: 1px 1px 4px #000;
     }
     .content {
-      padding: 60px 20px;
-      text-align: center;
+      background-color: rgba(0, 0, 0, 0.4);
+      padding: 30px;
+      border-radius: 16px;
+      max-width: 800px;
+      margin: auto;
+      line-height: 2;
+      font-size: 1.2rem;
     }
-    h1 { color: #4a148c; }
-    h2 { color: #6a1b9a; }
-    a { color: #00796b; text-decoration: none; margin-left: 10px; }
   </style>
 </head>
 <body>
-  <div class="background"></div>
   <div class="content">
     
-<p><a href="index.html">⬅️ Retour à la page principale</a></p>
 <h1>Horia</h1>
-<p>Horia est un projet pour construire un foyer pour tous — un espace de réflexion, de bonté et d'amélioration du monde.</p>
-<h2>Langues</h2>
-<a href="index.html">Retour à la sélection des langues</a>
-<h2>Notre objectif</h2>
-<p>Nous croyons que la sagesse collective, la bonté, la liberté et le désir de réduire la souffrance peuvent ouvrir une nouvelle voie de vie.</p>
-<h2>Rejoignez-nous</h2>
-<p>Horia n'appartient à aucune entité politique, religieuse ou économique. D'où que vous veniez, si vous cherchez la vérité et la compassion, soyez les bienvenus.</p>
+<p>Horia est un chemin de sagesse, de bonté et d’espoir.</p>
+<p>La vie se déroule en trois mondes : avant la naissance, maintenant, et après la mort. Et chaque être humain peut être porteur de lumière.</p>
+<p>Dans Horia, il n’y a pas de place pour la violence, l’humiliation ou la haine. La bonté, la connaissance, la joie, l’amitié et la dignité sont les piliers.</p>
 
   </div>
+
+  
+<!-- نوار موسیقی مشترک برای درج در همه صفحات -->
+<style>
+  .music-bar {
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.6);
+    padding: 12px 20px;
+    border-radius: 14px;
+    box-shadow: 0 0 10px #000;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .music-bar select, .music-bar button {
+    font-size: 1.2rem;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 8px;
+    background: #fff;
+    color: #000;
+    cursor: pointer;
+  }
+</style>
+
+<div class="music-bar">
+  <select id="music-select-bar" onchange="changeMusicBar()">
+    <option value="1">🎵 طبیعت</option>
+    <option value="2">🎹 پیانو</option>
+  </select>
+  <button onclick="toggleMusicBar()" id="music-toggle-btn">🔊</button>
+</div>
+
+<audio id="music-audio-bar" autoplay loop>
+  <source src="music/1.mp3" type="audio/mpeg" />
+</audio>
+
+<script>
+  const musicBar = document.getElementById("music-audio-bar");
+  const btnBar = document.getElementById("music-toggle-btn");
+  let playingBar = true;
+
+  function toggleMusicBar() {
+    if (playingBar) {
+      musicBar.pause();
+      btnBar.textContent = "🔇";
+    } else {
+      musicBar.play();
+      btnBar.textContent = "🔊";
+    }
+    playingBar = !playingBar;
+  }
+
+  function changeMusicBar() {
+    const selected = document.getElementById("music-select-bar").value;
+    musicBar.src = "music/" + selected + ".mp3";
+    musicBar.load();
+    if (playingBar) musicBar.play();
+  }
+</script>
+
 </body>
 </html>
