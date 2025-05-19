@@ -1,0 +1,38 @@
+
+<div class="music-bar">
+  <select id="music-select-bar" onchange="changeMusicBar()">
+    <option value="1">🎵</option>
+    <option value="2">🎶</option>
+    <option value="Ney">🪈</option>
+  </select>
+  <button onclick="toggleMusicBar()" id="music-toggle-btn">🔊</button>
+</div>
+
+<audio id="music-audio-bar" autoplay loop>
+  <source src="music/1.mp3" type="audio/mpeg" />
+</audio>
+
+<script>
+  const musicBar = document.getElementById("music-audio-bar");
+  const btnBar = document.getElementById("music-toggle-btn");
+  let playingBar = true;
+
+  function toggleMusicBar() {
+    if (playingBar) {
+      musicBar.pause();
+      btnBar.textContent = "🔇";
+    } else {
+      musicBar.play();
+      btnBar.textContent = "🔊";
+    }
+    playingBar = !playingBar;
+  }
+
+  function changeMusicBar() {
+    const selected = document.getElementById("music-select-bar").value;
+    let file = selected === "Ney" ? "Ney.mp3" : selected + ".mp3";
+    musicBar.src = "music/" + file;
+    musicBar.load();
+    if (playingBar) musicBar.play();
+  }
+</script>
