@@ -1,105 +1,46 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Horia - Music</title>
+  <title>Music – Horia</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <style>
     body {
       font-family: sans-serif;
-      background: url('img/horia_background.jpg') no-repeat center center fixed;
-      background-size: cover;
-      margin: 0;
-      padding: 0;
+      background: #f9f9f9;
+      padding: 2rem;
       text-align: center;
-      color: #fff;
-      padding-top: 60px;
-      text-shadow: 1px 1px 4px #000;
+      color: #333;
     }
-
-    .music-option {
-      display: inline-block;
-      margin: 30px;
-      cursor: pointer;
-      border-radius: 15px;
-      overflow: hidden;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
-      transition: transform 0.3s;
+    nav {
+      margin-bottom: 2rem;
     }
-
-    .music-option:hover {
-      transform: scale(1.05);
-    }
-
-    .music-option img {
-      width: 220px;
-      height: 220px;
-      object-fit: cover;
-      display: block;
-    }
-
-    .toggle-btn, .back-btn {
-      font-size: 3rem;
-      background: rgba(0,0,0,0.5);
-      border: none;
-      border-radius: 20px;
-      color: white;
-      padding: 20px 30px;
-      margin: 40px 15px;
-      cursor: pointer;
+    nav a {
+      margin: 0 1rem;
       text-decoration: none;
+      color: #0057b8;
+      font-weight: bold;
     }
-
-    .toggle-btn:hover, .back-btn:hover {
-      background: rgba(0,0,0,0.7);
+    .back {
+      display: block;
+      margin-bottom: 1.5rem;
+      font-size: 1.2rem;
     }
   </style>
 </head>
 <body>
-  <audio id="bg-music" autoplay loop>
-    <source src="music/1.mp3" type="audio/mpeg" />
-  </audio>
 
-  <div class="music-option" onclick="changeMusic('1')">
-    <img src="img/nature_icon.jpg.JPG" alt="Nature Sound" title="Nature Sound">
-  </div>
+<nav>
+  <a href="index.en.html">Home</a>
+  <a href="philosophy.en.html">Philosophy</a>
+  <a href="music.html">Music</a>
+  <a href="contact.html">Contact</a>
+  <a href="faq.en.html">FAQ</a>
+</nav>
 
-  <div class="music-option" onclick="changeMusic('2')">
-    <img src="img/piano_icon.jpg.JPG" alt="Piano Sound" title="Piano Sound">
-  </div>
+<a class="back" href="javascript:history.back()">← Back</a>
 
-  <div class="music-option" onclick="changeMusic('Ney')">
-    <img src="music/Ney_icon.jpg" alt="Ney Sound" title="Ney Sound">
-  </div>
+<h1>Music in Horia</h1>
 
-  <div>
-    <button onclick="toggleMusic()" id="music-btn" class="toggle-btn">🔊</button>
-    <a href="index.html" class="back-btn">⬅️</a>
-  </div>
-
-  <script>
-    const music = document.getElementById("bg-music");
-    const btn = document.getElementById("music-btn");
-    let isPlaying = true;
-
-    function toggleMusic() {
-      if (isPlaying) {
-        music.pause();
-        btn.textContent = "🔇";
-      } else {
-        music.play();
-        btn.textContent = "🔊";
-      }
-      isPlaying = !isPlaying;
-    }
-
-    function changeMusic(track) {
-      let file = track === "Ney" ? "Ney.mp3" : track + ".mp3";
-      music.src = `music/${file}`;
-      music.load();
-      if (isPlaying) music.play();
-    }
-  </script>
 </body>
 </html>
