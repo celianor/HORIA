@@ -1,27 +1,79 @@
 <!DOCTYPE html>
-<html lang="fa" dir="rtl">
+<html lang="fa">
 <head>
-  <meta charset="UTF-8">
-  <title>تماس و مشارکت – Horia</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8" />
+  <title>تماس با ما - هوریا</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
-    body { font-family: sans-serif; background: #f8f8f8; padding: 2rem; text-align: center; color: #333; }
-    nav a { margin: 0 1rem; color: #0057b8; text-decoration: none; font-weight: bold; }
-    .container { background: #fff; padding: 2rem; border-radius: 12px; max-width: 600px; margin: 2rem auto; box-shadow: 0 0 10px rgba(0,0,0,0.05); }
-    .email { font-weight: bold; color: #0084ff; }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f7f0;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      text-align: center;
+    }
+    .lang-bar {
+      background-color: #c8e6c9;
+      padding: 0.5rem 0;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 2px solid #a5d6a7;
+      overflow-x: auto;
+    }
+    .lang-bar a {
+      color: #2e7d32;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 0.3rem 0.6rem;
+      border-radius: 4px;
+      white-space: nowrap;
+      font-size: 1rem;
+    }
+    .lang-bar a:hover {
+      color: #1b5e20;
+    }
+    main {
+      margin: 3rem auto;
+      max-width: 600px;
+      padding: 1rem;
+      color: #4a7d4a;
+    }
+    h1 {
+      color: #2e7d32;
+      margin-bottom: 1rem;
+    }
+    p {
+      font-size: 1.2rem;
+      line-height: 1.8;
+    }
+    .email {
+      font-weight: bold;
+      direction: ltr;
+      margin-top: 1rem;
+    }
   </style>
 </head>
 <body>
+  <nav class="lang-bar">
+    <a href="index.en.html">English</a>
+    <a href="index.fr.html">Français</a>
+    <a href="index.es.html">Español</a>
+    <a href="index.ar.html">العربية</a>
+    <a href="index.fa.html">فارسی</a>
+  </nav>
 
-<nav>
-<a href="index.fa.html">خانه</a><a href="music.fa.html">موسیقی</a><a href="philosophy.fa.html">فلسفه</a><a href="contact.fa.html">تماس</a><a href="faq.fa.html">پرسش و پاسخ</a>
-</nav>
-
-<div class="container">
-  <h2>تماس و مشارکت</h2>
-  <p>اگر می‌خواهی بخشی از ساختن جهانی مهربان‌تر باشی، یا پیشنهادی داری، یا فقط دوست داری سلامی بگویی، خوشحال می‌شویم صدایت را بشنویم.</p>
-  <p class="email">ایمیل ما: horiansho@gmail.com</p>
-</div>
-
+  <main>
+    <h1>تماس با ما</h1>
+    <p>
+      اگر پرسشی، پیشنهادی یا سخنی با ما دارید، خوشحال می‌شویم بشنویم.<br>
+      می‌توانید از طریق ایمیل زیر با ما در تماس باشید:
+    </p>
+    <div class="email">horiansho@gmail.com</div>
+  </main>
 </body>
 </html>
