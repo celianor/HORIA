@@ -1,18 +1,20 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
   <title>اتصل بنا - هوريا</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
     body {
       font-family: Arial, sans-serif;
       background-color: #f0f7f0;
-      margin: 0; padding: 0;
+      margin: 0;
+      padding: 0;
       color: #333;
       text-align: center;
-      direction: rtl;
     }
     .lang-bar {
       background-color: #c8e6c9;
@@ -44,7 +46,6 @@
       max-width: 600px;
       padding: 1rem;
       color: #4a7d4a;
-      text-align: right;
     }
     h1 {
       color: #2e7d32;
@@ -52,4 +53,31 @@
     }
     p {
       font-size: 1.2rem;
-      line-height:
+      line-height: 1.8;
+    }
+    .email {
+      font-weight: bold;
+      direction: ltr;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <nav class="lang-bar">
+    <a href="contact.en.html">English</a>
+    <a href="contact.fr.html">Français</a>
+    <a href="contact.es.html">Español</a>
+    <a href="contact.ar.html">العربية</a>
+    <a href="contact.fa.html">فارسی</a>
+  </nav>
+
+  <main>
+    <h1>اتصل بنا</h1>
+    <p>
+      إذا كان لديك أي سؤال أو اقتراح أو تعليق، يسعدنا أن نتلقى رسالتك.<br>
+      يمكنك التواصل معنا عبر البريد الإلكتروني التالي:
+    </p>
+    <div class="email">horiansho@gmail.com</div>
+  </main>
+</body>
+</html>
