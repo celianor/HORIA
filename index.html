@@ -2,52 +2,76 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Horia – A Path of Kindness, Wisdom and Freedom</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Welcome to Horia</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
     body {
-      font-family: sans-serif;
-      background: #f4f4f4;
-      padding: 3rem;
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #a8e6cf, #dcedc1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      color: #2e7d32;
       text-align: center;
-      color: #333;
+      padding: 20px;
     }
+
     h1 {
-      margin-bottom: 1rem;
-      font-size: 2.2rem;
+      font-size: 3rem;
+      margin-bottom: 10px;
     }
+
     p {
-      font-size: 1.2rem;
-      margin-bottom: 2rem;
+      font-size: 1.3rem;
+      max-width: 400px;
+      margin-bottom: 40px;
+      font-weight: 500;
     }
-    .lang-links a {
-      display: inline-block;
-      margin: 0.5rem 1rem;
-      padding: 0.75rem 1.5rem;
-      text-decoration: none;
-      background: #0057b8;
+
+    .language-selector {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+      max-width: 600px;
+      width: 100%;
+    }
+
+    .lang-btn {
+      flex: 1 1 120px;
+      padding: 15px 0;
+      border-radius: 12px;
+      background-color: #81c784;
       color: white;
-      border-radius: 6px;
-      font-weight: bold;
-      font-size: 1rem;
+      font-weight: 700;
+      text-decoration: none;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      user-select: none;
     }
-    .lang-links a:hover {
-      background: #004190;
+
+    .lang-btn:hover {
+      background-color: #66bb6a;
+      transform: scale(1.05);
     }
   </style>
 </head>
 <body>
 
   <h1>Welcome to Horia</h1>
-  <p>Please choose your language:</p>
+  <p>A home for kindness, wisdom, freedom, and light.</p>
 
-  <div class="lang-links">
-    <a href="index.en.html">English</a>
-    <a href="index.fr.html">Français</a>
-    <a href="index.es.html">Español</a>
-    <a href="index.ar.html">العربية</a>
-    <a href="index.fa.html">فارسی</a>
-    <a href="music.html">Music</a>
+  <div class="language-selector">
+    <a href="index.en.html" class="lang-btn" lang="en" hreflang="en">English</a>
+    <a href="index.fr.html" class="lang-btn" lang="fr" hreflang="fr">Français</a>
+    <a href="index.es.html" class="lang-btn" lang="es" hreflang="es">Español</a>
+    <a href="index.ar.html" class="lang-btn" lang="ar" hreflang="ar">العربية</a>
+    <a href="index.fa.html" class="lang-btn" lang="fa" hreflang="fa">فارسی</a>
   </div>
 
 </body>
