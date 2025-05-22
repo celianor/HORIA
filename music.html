@@ -3,148 +3,151 @@
 <head>
   <meta charset="UTF-8" />
   <title>Music – Horia</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Vazir&display=swap');
-
     body {
-      font-family: 'Vazir', Tahoma, Geneva, sans-serif;
+      font-family: "Tahoma", "Arial", sans-serif;
       background-image: url('img/horia_background.jpg');
       background-size: cover;
       background-repeat: no-repeat;
-      background-position: center center;
+      background-position: center;
+      padding: 2rem;
+      color: #fff;
       margin: 0;
-      padding: 2rem 1rem;
-      color: #f4f4f4;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
       align-items: center;
       text-align: center;
-      backdrop-filter: brightness(0.7);
     }
 
-    .overlay {
-      position: fixed;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0,0,0,0.55);
-      z-index: -1;
-    }
-
-    a.home-link {
-      position: fixed;
-      top: 1rem;
-      left: 1rem;
+    .lang-bar {
+      width: 100%;
       background: rgba(0, 0, 0, 0.6);
-      color: #fff;
-      padding: 0.5rem 1rem;
-      border-radius: 8px;
+      padding: 0.6rem 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 1.2rem;
       font-weight: 600;
-      text-decoration: none;
       font-size: 1rem;
-      transition: background-color 0.3s ease;
-      box-shadow: 0 0 10px rgba(255,255,255,0.3);
-      z-index: 10;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
     }
-    a.home-link:hover {
-      background: rgba(224, 122, 95, 0.8);
-      color: #fff;
+
+    .lang-bar a {
+      color: #ffd;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    .lang-bar a:hover {
+      color: #f0a500;
+      text-decoration: underline;
+    }
+    .lang-bar a.ar {
+      font-family: "Tahoma", "Arial", sans-serif;
+      direction: rtl;
     }
 
     h1 {
+      margin-top: 3.5rem;
+      margin-bottom: 1.5rem;
       font-size: 3rem;
-      margin: 1rem 0 2rem;
+      text-shadow: 1.5px 1.5px 5px #000;
       font-weight: 700;
-      letter-spacing: 0.1em;
-      text-shadow: 2px 2px 5px #000000aa;
-      text-transform: uppercase;
-      color: #e07a5f;
+      letter-spacing: 3px;
     }
 
-    nav.icons {
+    nav {
       display: flex;
-      gap: 2.2rem;
       justify-content: center;
+      gap: 2.5rem;
       flex-wrap: wrap;
-      margin-bottom: 3rem;
       max-width: 600px;
+      margin-bottom: 2rem;
     }
 
     .icon {
       width: 100px;
       height: 100px;
-      border-radius: 15px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-      cursor: pointer;
       object-fit: cover;
+      border-radius: 12px;
+      cursor: pointer;
+      box-shadow: 0 0 8px rgba(0,0,0,0.7);
       transition: transform 0.25s ease, box-shadow 0.25s ease;
-      border: 3px solid transparent;
     }
-    .icon:hover,
-    .icon:focus {
+
+    .icon:hover {
       transform: scale(1.15);
-      border-color: #e07a5f;
-      box-shadow: 0 6px 15px rgba(224, 122, 95, 0.8);
-      outline: none;
+      box-shadow: 0 0 15px #f0a500;
     }
 
     #player {
-      width: 100%;
-      max-width: 600px;
+      width: 90%;
+      max-width: 500px;
       outline: none;
       border-radius: 10px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.7);
-      background: #1a1a1a;
-      margin-bottom: 1rem;
+      box-shadow: 0 0 15px rgba(240,165,0,0.7);
+      margin-top: 1rem;
     }
 
     #now-playing {
+      margin-top: 1rem;
       font-size: 1.25rem;
       font-style: italic;
-      color: #ffdca4;
-      text-shadow: 1px 1px 3px #000000cc;
+      color: #ffecb3;
+      text-shadow: 1px 1px 3px #000;
       min-height: 2em;
     }
 
-    /* Responsive */
-    @media (max-width: 500px) {
-      h1 {
-        font-size: 2.2rem;
-      }
-      .icon {
-        width: 80px;
-        height: 80px;
-      }
-      nav.icons {
-        gap: 1.5rem;
-      }
+    .home-link {
+      position: fixed;
+      top: 0.6rem;
+      left: 1rem;
+      color: #ffd;
+      background: rgba(0,0,0,0.5);
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 0 5px #000;
+      z-index: 1100;
+      transition: background-color 0.3s ease;
+    }
+    .home-link:hover {
+      background-color: rgba(240,165,0,0.8);
+      color: #222;
     }
   </style>
 </head>
 <body>
 
-  <div class="overlay"></div>
+  <div class="lang-bar" role="navigation" aria-label="Select language">
+    <a href="index_fa.html" hreflang="fa" lang="fa">فارسی</a>
+    <a href="index_en.html" hreflang="en" lang="en">English</a>
+    <a href="index_fr.html" hreflang="fr" lang="fr">Français</a>
+    <a href="index_es.html" hreflang="es" lang="es">Español</a>
+    <a href="index_ar.html" hreflang="ar" lang="ar" class="ar">العربية</a>
+  </div>
 
-  <a href="index.html" class="home-link" aria-label="Go to Home page">Home</a>
+  <a href="index_en.html" class="home-link" aria-label="Go to Home Page">Home</a>
 
-  <h1>Music</h1>
+  <h1>MUSIC</h1>
 
-  <nav class="icons" role="navigation" aria-label="Music tracks">
-    <img src="img/nature_icon.jpg.JPG" alt="Nature sound" class="icon"
-         tabindex="0"
-         onclick="playMusic('music/1.mp3', 'Nature')"
-         onkeypress="if(event.key==='Enter'){playMusic('music/1.mp3', 'Nature')}" />
-    <img src="img/piano_icon.jpg.JPG" alt="Piano music" class="icon"
-         tabindex="0"
-         onclick="playMusic('music/2.mp3', 'Piano')"
-         onkeypress="if(event.key==='Enter'){playMusic('music/2.mp3', 'Piano')}" />
-    <img src="img/Ney_icon.jpg" alt="Ney instrument" class="icon"
-         tabindex="0"
-         onclick="playMusic('music/Ney.mp3', 'Ney')"
-         onkeypress="if(event.key==='Enter'){playMusic('music/Ney.mp3', 'Ney')}" />
+  <nav aria-label="Music selections">
+    <img src="img/nature_icon.jpg.JPG" alt="Nature" class="icon"
+         onclick="playMusic('music/1.mp3', 'Nature')" tabindex="0"
+         onkeypress="if(event.key==='Enter'){playMusic('music/1.mp3', 'Nature')}"/>
+    <img src="img/piano_icon.jpg.JPG" alt="Piano" class="icon"
+         onclick="playMusic('music/2.mp3', 'Piano')" tabindex="0"
+         onkeypress="if(event.key==='Enter'){playMusic('music/2.mp3', 'Piano')}"/>
+    <img src="img/Ney_icon.jpg" alt="Ney" class="icon"
+         onclick="playMusic('music/Ney.mp3', 'Ney')" tabindex="0"
+         onkeypress="if(event.key==='Enter'){playMusic('music/Ney.mp3', 'Ney')}"/>
   </nav>
 
-  <audio id="player" controls preload="none" aria-label="Music player"></audio>
+  <audio id="player" controls aria-label="Music player"></audio>
   <div id="now-playing" aria-live="polite" aria-atomic="true"></div>
 
   <script>
@@ -152,7 +155,7 @@
       const player = document.getElementById('player');
       player.src = src;
       player.play();
-      document.getElementById('now-playing').textContent = `Now playing: ${title}`;
+      document.getElementById('now-playing').innerText = `Now playing: ${title}`;
     }
   </script>
 
