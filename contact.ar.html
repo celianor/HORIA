@@ -2,33 +2,30 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
-  <title>اتصل بنا - هوريا</title>
+  <title>هوريا - تواصل</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
-    * {
-      box-sizing: border-box;
-    }
     body {
-      font-family: Arial, sans-serif;
+      font-family: "Arial", sans-serif;
       background-color: #f0f7f0;
       margin: 0;
       padding: 0;
       color: #333;
       text-align: center;
+      direction: rtl;
     }
+
     .lang-bar {
       background-color: #c8e6c9;
       padding: 0.5rem 0;
       display: flex;
       justify-content: center;
       gap: 1rem;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
       border-bottom: 2px solid #a5d6a7;
       overflow-x: auto;
-      max-width: 100%;
+      -webkit-overflow-scrolling: touch;
     }
+
     .lang-bar a {
       color: #2e7d32;
       text-decoration: none;
@@ -36,33 +33,48 @@
       padding: 0.3rem 0.6rem;
       border-radius: 4px;
       white-space: nowrap;
+      transition: color 0.3s ease;
       font-size: 1rem;
     }
+
     .lang-bar a:hover {
       color: #1b5e20;
     }
+
     main {
-      margin: 3rem auto;
-      max-width: 600px;
-      padding: 1rem;
+      margin: 2rem 1rem;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
       color: #4a7d4a;
     }
+
     h1 {
       color: #2e7d32;
       margin-bottom: 1rem;
     }
+
     p {
-      font-size: 1.2rem;
-      line-height: 1.8;
+      font-weight: 600;
+      font-size: 1.1rem;
+      line-height: 1.7;
     }
-    .email {
+
+    .email-box {
+      margin-top: 2rem;
+      font-size: 1.1rem;
+      color: #1b5e20;
       font-weight: bold;
-      direction: ltr;
-      margin-top: 1rem;
+      background-color: #e8f5e9;
+      display: inline-block;
+      padding: 0.7rem 1.2rem;
+      border-radius: 6px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
   </style>
 </head>
 <body>
+
   <nav class="lang-bar">
     <a href="contact.en.html">English</a>
     <a href="contact.fr.html">Français</a>
@@ -74,10 +86,14 @@
   <main>
     <h1>اتصل بنا</h1>
     <p>
-      إذا كان لديك أي سؤال أو اقتراح أو تعليق، يسعدنا أن نتلقى رسالتك.<br>
-      يمكنك التواصل معنا عبر البريد الإلكتروني التالي:
+      إذا كانت لديك أسئلة أو رغبت بمشاركة أفكارك أو اقتراحاتك، يسعدنا أن نتلقى رسالتك.
+      نؤمن بالحوار ونرحب بكل من يسعى إلى المعرفة والنور.
     </p>
-    <div class="email">horiansho@gmail.com</div>
+
+    <div class="email-box">
+      horiansho@gmail.com
+    </div>
   </main>
+
 </body>
 </html>
