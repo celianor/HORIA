@@ -1,27 +1,55 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar">
 <head>
-  <meta charset="UTF-8">
-  <title>التواصل والمشاركة – Horia</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8" />
+  <title>اتصل بنا - هوريا</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
-    body { font-family: sans-serif; background: #f8f8f8; padding: 2rem; text-align: center; color: #333; }
-    nav a { margin: 0 1rem; color: #0057b8; text-decoration: none; font-weight: bold; }
-    .container { background: #fff; padding: 2rem; border-radius: 12px; max-width: 600px; margin: 2rem auto; box-shadow: 0 0 10px rgba(0,0,0,0.05); }
-    .email { font-weight: bold; color: #0084ff; }
-  </style>
-</head>
-<body>
-
-<nav>
-<a href="index.ar.html">الرئيسية</a><a href="music.ar.html">موسيقى</a><a href="philosophy.ar.html">الفلسفة</a><a href="contact.ar.html">اتصال</a><a href="faq.ar.html">الأسئلة الشائعة</a>
-</nav>
-
-<div class="container">
-  <h2>التواصل والمشاركة</h2>
-  <p>إذا كنت ترغب في المساهمة، أو مشاركة فكرة، أو فقط إلقاء التحية – فنحن نتطلع إلى سماعك.</p>
-  <p class="email">راسلنا على: horiansho@gmail.com</p>
-</div>
-
-</body>
-</html>
+    * { box-sizing: border-box; }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f7f0;
+      margin: 0; padding: 0;
+      color: #333;
+      text-align: center;
+      direction: rtl;
+    }
+    .lang-bar {
+      background-color: #c8e6c9;
+      padding: 0.5rem 0;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 2px solid #a5d6a7;
+      overflow-x: auto;
+      max-width: 100%;
+    }
+    .lang-bar a {
+      color: #2e7d32;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 0.3rem 0.6rem;
+      border-radius: 4px;
+      white-space: nowrap;
+      font-size: 1rem;
+    }
+    .lang-bar a:hover {
+      color: #1b5e20;
+    }
+    main {
+      margin: 3rem auto;
+      max-width: 600px;
+      padding: 1rem;
+      color: #4a7d4a;
+      text-align: right;
+    }
+    h1 {
+      color: #2e7d32;
+      margin-bottom: 1rem;
+    }
+    p {
+      font-size: 1.2rem;
+      line-height:
