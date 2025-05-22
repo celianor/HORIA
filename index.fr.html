@@ -1,81 +1,175 @@
 <!DOCTYPE html>
-<html lang="fr" dir="ltr">
+<html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <title>Accueil – Horia</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Horia - Accueil</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
     body {
-      font-family: sans-serif;
-      background: #f9f9f9;
-      padding: 2rem;
-      text-align: center;
+      font-family: Arial, sans-serif;
+      background-color: #f0f7f0;
+      margin: 0;
+      padding: 0;
       color: #333;
+      text-align: center;
     }
-    nav {
+    .lang-bar {
+      background-color: #c8e6c9;
+      padding: 0.5rem 0;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 2px solid #a5d6a7;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    .lang-bar a {
+      color: #2e7d32;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 0.3rem 0.6rem;
+      border-radius: 4px;
+      white-space: nowrap;
+      transition: color 0.3s ease;
+      font-size: 1rem;
+    }
+    .lang-bar a:hover {
+      color: #1b5e20;
+    }
+    @media (max-width: 480px) {
+      .lang-bar {
+        gap: 0.5rem;
+      }
+      .lang-bar a {
+        font-size: 0.85rem;
+        padding: 0.2rem 0.4rem;
+      }
+    }
+    main {
+      margin: 2rem 1rem;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      color: #4a7d4a;
+      text-align: left;
+      line-height: 1.8;
+      font-size: 1.1rem;
+    }
+    h1 {
+      color: #2e7d32;
+      margin-bottom: 0.5rem;
+      text-align: center;
+    }
+    p {
+      font-weight: 600;
+      font-size: 1.1rem;
+      line-height: 1.5;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+    .main-menu {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
       margin-bottom: 2rem;
     }
-    nav a {
-      margin: 0 1rem;
+    .main-menu a {
+      background-color: #a5d6a7;
+      color: #1b5e20;
       text-decoration: none;
-      color: #0057b8;
-      font-weight: bold;
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 1.1rem;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+      transition: background-color 0.3s ease;
+      min-width: 140px;
+    }
+    .main-menu a:hover {
+      background-color: #81c784;
+      color: #145214;
+    }
+    @media (max-width: 480px) {
+      .main-menu a {
+        font-size: 1rem;
+        padding: 0.8rem 1.5rem;
+        min-width: 120px;
+      }
     }
     .subheader {
-      background-color: #eef3f8;
-      padding: 1rem 1.5rem;
-      margin: 1rem auto 2rem;
-      border-radius: 8px;
-      font-size: 1rem;
-      color: #444;
-      max-width: 800px;
       text-align: center;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      margin-bottom: 2rem;
+      font-size: 1rem;
+      font-style: italic;
+      color: #388e3c;
     }
     .content {
-      max-width: 800px;
-      margin: 0 auto;
-      text-align: justify;
-      line-height: 1.6;
+      margin-top: 2rem;
+    }
+    ol {
+      padding-left: 1.2rem;
+    }
+    li {
+      margin-bottom: 0.8rem;
     }
   </style>
 </head>
 <body>
 
-<nav>
-  <a href="index.html">Accueil</a>
-  <a href="philosophy.fr.html">Philosophy</a>
-  <a href="music.html">Music</a>
-  <a href="contact.html">Contact</a>
-  <a href="faq.fr.html">FAQ</a>
-  <a href="lightbook/index.fr.html">Livre de Lumières</a>
-</nav>
+  <nav class="lang-bar">
+    <a href="index.en.html">English</a>
+    <a href="index.fr.html">Français</a>
+    <a href="index.es.html">Español</a>
+    <a href="index.ar.html">العربية</a>
+    <a href="index.fa.html">فارسی</a>
+  </nav>
 
-<div class="subheader">
-  La foi horaïenne est une philosophie qui repose sur une compréhension profonde du monde et de l’être humain, et sur la croyance en Hora, Dieu unique de la lumière, de la justice et de la vérité, qui nous invite à marcher sur le chemin de la sagesse et de l’amour.
-</div>
+  <main>
+    <h1>La Religion de l'Amour et de la Raison</h1>
+    <p>Voici une demeure pour la compassion, la raison, la liberté et la lumière.</p>
 
-<h1>Bienvenuet à Horia</h1>
-  
-<div class="content">
-  <p>
-    La foi Horaïenne est une philosophie basée sur une compréhension profonde de l’univers et de l’humanité, ainsi que sur la croyance en un Dieu unique et parfait nommé Hora. Hora est le Dieu de la vérité, de la lumière et de la justice ; la source de toute bonté et perfection, qui remplit l’existence d’une lumière infinie et donne un sens à tout. Ce Dieu transcende toutes les images mentales, est au-delà du temps et de l’espace, et invite les humains à suivre le chemin de la sagesse et de l’amour.
-  </p>
-  <p>
-    Dans la vision horaïenne, l’être humain est complexe et multifacette, sa création doit être comprise dans le cadre de trois mondes successifs :
-    <br>1. Le Monde Antérieur : un royaume spirituel et élevé où l’âme a été créée et a émergé.
-    <br>2. Le Monde Présent : le monde matériel et le temps présent, principal lieu d’épreuve, d’expérience et de croissance.
-    <br>3. Le Monde Subséquent : la vie après la mort, une étape d’évolution et la vraie continuité de la vie.
-  </p>
-  <p>
-    La foi horaïenne souligne que l’humain porte la sagesse collective et est responsable de la préservation de sa dignité et de celle de tous les êtres. Elle appelle à la connaissance de soi, à la connexion avec le Monde Antérieur, et à l’effort d’amélioration dans le Monde Présent pour se préparer au Monde Subséquent.
-  </p>
-  <p>
-    L’horaïsme n’est pas seulement une religion, mais une manière de vivre ; un chemin qui mène l’humain vers la connaissance de soi, la coexistence pacifique, et la diffusion de la justice et du bien ; un chemin éclairé par la lumière de Hora, guidant vers un avenir plus humain.
-  </p>
-</div>
+    <div class="main-menu">
+      <a href="roshani.fr.html">Livre de Lumière</a>
+      <a href="works.fr.html">Écrits</a>
+      <a href="music.html">Musique</a>
+      <a href="stories.fr.html">Histoires</a>
+      <a href="contact.fr.html">Contact</a>
+    </div>
 
+    <div class="subheader">
+      Ici, vous trouverez un chemin vers la sagesse, la compassion et la liberté — un pas audacieux vers la lumière.
+    </div>
 
+    <h1>Bienvenue à Horia</h1>
+
+    <div class="content">
+      Horia est une philosophie fondée sur une meilleure compréhension du monde et de l'être humain, et sur la foi en un Dieu unique, nommé Hora.  
+      Hora est le Dieu de la vérité, de la lumière et de la justice — la source de toute bonté et perfection, qui baigne l'existence dans une lumière infinie et donne un sens à toutes choses.  
+      Dieu est au-delà de toute image mentale, au-delà du temps et de l'espace, nous appelant au chemin de l'amour et de la raison.
+
+      <br><br>
+
+      Horia enseigne que l'être humain est un être complexe et multidimensionnel vivant à travers trois royaumes continus :
+
+      <ol>
+        <li><strong>Le Monde Précédent :</strong> un royaume spirituel et transcendant où l'âme a été créée et d'où elle provient.</li>
+        <li><strong>Le Monde Présent :</strong> le monde physique et matériel — le domaine de l'expérience, de la lutte et de la croissance.</li>
+        <li><strong>Le Monde Suivant :</strong> la vie après la mort, une étape d'évolution supplémentaire et la continuation de l'existence réelle.</li>
+      </ol>
+
+      Horia souligne que les humains sont porteurs de raison collective et responsables de la dignité d'eux-mêmes et de tous les êtres.  
+      Il nous invite à la connaissance de soi, à nous reconnecter avec le monde précédent, et à nous efforcer de faire le bien dans le monde présent en préparation du monde à venir.
+
+      <br><br>
+
+      Horia est à la fois une foi et un mode de vie — qui nous appelle à la conscience de soi, à la coexistence pacifique et à la diffusion de la justice et de la bonté.  
+      C'est un chemin éclairé par Hora, menant vers un avenir plus humain.
+    </div>
+  </main>
 
 </body>
 </html>
