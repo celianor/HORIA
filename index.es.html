@@ -1,83 +1,175 @@
 <!DOCTYPE html>
-<html lang="es" dir="ltr">
+<html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <title>Inicio – Horia</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Horia - Inicio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
     body {
-      font-family: sans-serif;
-      background: #f9f9f9;
-      padding: 2rem;
-      text-align: center;
+      font-family: Arial, sans-serif;
+      background-color: #f0f7f0;
+      margin: 0;
+      padding: 0;
       color: #333;
+      text-align: center;
     }
-    nav {
+    .lang-bar {
+      background-color: #c8e6c9;
+      padding: 0.5rem 0;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 2px solid #a5d6a7;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    .lang-bar a {
+      color: #2e7d32;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 0.3rem 0.6rem;
+      border-radius: 4px;
+      white-space: nowrap;
+      transition: color 0.3s ease;
+      font-size: 1rem;
+    }
+    .lang-bar a:hover {
+      color: #1b5e20;
+    }
+    @media (max-width: 480px) {
+      .lang-bar {
+        gap: 0.5rem;
+      }
+      .lang-bar a {
+        font-size: 0.85rem;
+        padding: 0.2rem 0.4rem;
+      }
+    }
+    main {
+      margin: 2rem 1rem;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      color: #4a7d4a;
+      text-align: left;
+      line-height: 1.8;
+      font-size: 1.1rem;
+    }
+    h1 {
+      color: #2e7d32;
+      margin-bottom: 0.5rem;
+      text-align: center;
+    }
+    p {
+      font-weight: 600;
+      font-size: 1.1rem;
+      line-height: 1.5;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+    .main-menu {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
       margin-bottom: 2rem;
     }
-    nav a {
-      margin: 0 1rem;
+    .main-menu a {
+      background-color: #a5d6a7;
+      color: #1b5e20;
       text-decoration: none;
-      color: #0057b8;
-      font-weight: bold;
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 1.1rem;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+      transition: background-color 0.3s ease;
+      min-width: 140px;
+    }
+    .main-menu a:hover {
+      background-color: #81c784;
+      color: #145214;
+    }
+    @media (max-width: 480px) {
+      .main-menu a {
+        font-size: 1rem;
+        padding: 0.8rem 1.5rem;
+        min-width: 120px;
+      }
     }
     .subheader {
-      background-color: #eef3f8;
-      padding: 1rem 1.5rem;
-      margin: 1rem auto 2rem;
-      border-radius: 8px;
-      font-size: 1rem;
-      color: #444;
-      max-width: 800px;
       text-align: center;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      margin-bottom: 2rem;
+      font-size: 1rem;
+      font-style: italic;
+      color: #388e3c;
     }
     .content {
-      max-width: 800px;
-      margin: 0 auto;
-      text-align: justify;
-      line-height: 1.6;
+      margin-top: 2rem;
+    }
+    ol {
+      padding-left: 1.2rem;
+    }
+    li {
+      margin-bottom: 0.8rem;
     }
   </style>
 </head>
 <body>
 
-<nav>
-  <a href="index.html">Inicio</a>
-  <a href="philosophy.es.html">Filosofía</a>
-  <a href="music.html">Música</a>
-  <a href="contact.html">Contacto</a>
-  <a href="faq.es.html">Preguntas Frecuentes</a>
-  <a href="lightbook/index.es.html">Libro de Claridades</a>
-</nav>
+  <nav class="lang-bar">
+    <a href="index.en.html">English</a>
+    <a href="index.fr.html">Français</a>
+    <a href="index.es.html">Español</a>
+    <a href="index.ar.html">العربية</a>
+    <a href="index.fa.html">فارسی</a>
+  </nav>
 
+  <main>
+    <h1>La Religión del Amor y la Razón</h1>
+    <p>Esta es una casa para la compasión, la razón, la libertad y la luz.</p>
 
-  <h1>Bienvenido a Horia</h1>
+    <div class="main-menu">
+      <a href="roshani.es.html">Libro de la Luz</a>
+      <a href="works.es.html">Escritos</a>
+      <a href="music.html">Música</a>
+      <a href="stories.es.html">Historias</a>
+      <a href="contact.es.html">Contacto</a>
+    </div>
 
+    <div class="subheader">
+      Aquí encontrarás un camino hacia la sabiduría, la compasión y la libertad — un paso valiente hacia la luz.
+    </div>
 
-<div class="subheader">
-  La fe Horaiana es una filosofía basada en una comprensión profunda del universo y de la humanidad, y en la creencia en un único Dios perfecto llamado Hora, que nos invita a seguir el camino de la sabiduría y del amor.
-</div>
+    <h1>Bienvenido a Horia</h1>
 
-<div class="content">
-  <p>
-    La fe Horaiana es una filosofía basada en una profunda comprensión del universo y la humanidad, y en la creencia en un Dios único y perfecto llamado Hora. Hora es el Dios de la verdad, la luz y la justicia; la fuente de toda bondad y perfección, que llena la existencia con luz infinita y da sentido a todo. Este Dios trasciende toda imagen mental, está más allá del tiempo y el espacio, e invita a los humanos a seguir el camino de la sabiduría y el amor.
-  </p>
-  <p>
-    En la visión Horaiana, el ser humano es un ser complejo y multifacético cuya creación debe entenderse dentro del marco de tres mundos sucesivos:
-    <br>1. El Mundo Anterior: un reino espiritual y elevado donde el alma fue creada y emergió.
-    <br>2. El Mundo Presente: el mundo material y el tiempo presente, el principal escenario de prueba, experiencia y crecimiento.
-    <br>3. El Mundo Subsiguiente: la vida después de la muerte, una etapa de evolución y la verdadera continuación de la vida.
-  </p>
-  <p>
-    La fe Horaiana enfatiza que los humanos llevan la sabiduría colectiva y son responsables de preservar su propia dignidad y la de todos los seres. Llama a conocerse a sí mismos, a conectarse con el Mundo Anterior y a esforzarse por mejorar en el Mundo Presente para prepararse para el Mundo Subsiguiente.
-  </p>
-  <p>
-    La Horaianidad no es solo una religión, sino una forma de vida; un camino que conduce a los humanos hacia el autoconocimiento, la coexistencia pacífica y la difusión de la justicia y la bondad; un camino iluminado por la luz de Hora que guía hacia un futuro más humano.
-  </p>
-</div>
+    <div class="content">
+      Horia es una filosofía basada en una comprensión más profunda del mundo y del ser humano, y en la fe en un Dios único llamado Hora.  
+      Hora es el Dios de la verdad, la luz y la justicia — la fuente de toda bondad y perfección, que baña la existencia en luz infinita y da sentido a todo.  
+      Dios está más allá de cualquier imagen mental, más allá del tiempo y el espacio, llamándonos al camino del amor y la razón.
 
+      <br><br>
 
+      Horia enseña que el ser humano es un ser complejo y multidimensional que vive a través de tres mundos continuos:
+
+      <ol>
+        <li><strong>El Mundo Anterior:</strong> un reino espiritual y trascendental donde el alma fue creada y del que proviene.</li>
+        <li><strong>El Mundo Presente:</strong> el mundo físico y material — el ámbito de la experiencia, la lucha y el crecimiento.</li>
+        <li><strong>El Mundo Posterior:</strong> la vida después de la muerte, una etapa más de evolución y la continuación de la existencia real.</li>
+      </ol>
+
+      Horia subraya que los seres humanos son portadores de razón colectiva y responsables de su propia dignidad y la de todos los seres.  
+      Nos invita al autoconocimiento, a reconectar con el mundo anterior, y a esforzarnos por hacer el bien en el mundo presente en preparación para el mundo por venir.
+
+      <br><br>
+
+      Horia es tanto una fe como una forma de vida — que nos llama a la conciencia de nosotros mismos, a la convivencia pacífica y a la difusión de justicia y bondad.  
+      Es un camino iluminado por Hora, que conduce hacia un futuro más humano.
+    </div>
+  </main>
 
 </body>
 </html>
