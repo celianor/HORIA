@@ -1,53 +1,95 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" dir="ltr">
 <head>
-  <meta charset="UTF-8" />
-  <title>El Libro de las Luces</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <title>Libro de la Luz</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     body {
-      font-family: sans-serif;
-      background: #f4f4f4;
+      font-family: 'Arial', sans-serif;
+      background-color: #fffef5;
+      margin: 0;
       padding: 2rem;
-      text-align: left;
       color: #333;
     }
-    h1 {
-      text-align: center;
-      color: #0057b8;
+
+    .lang-bar {
+      background-color: #c8e6c9;
+      padding: 0.5rem 0;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      border-bottom: 2px solid #a5d6a7;
     }
-    ul {
-      list-style: none;
-      padding: 0;
-    }
-    li {
-      margin: 1rem 0;
-    }
-    a {
+
+    .lang-bar a {
+      color: #2e7d32;
       text-decoration: none;
-      color: #0077cc;
-      font-weight: bold;
+      font-weight: 600;
+      font-size: 1rem;
     }
-    a:hover {
-      color: #004b99;
+
+    .lang-bar a:hover {
+      color: #1b5e20;
     }
-    .nav {
+
+    header {
       text-align: center;
-      margin-top: 3rem;
+      margin-bottom: 2rem;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      color: #4e342e;
+    }
+
+    .links {
+      max-width: 600px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+
+    .links a {
+      background-color: #fff8e1;
+      border: 1px solid #ffe082;
+      padding: 1rem;
+      border-radius: 8px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 1.1rem;
+      color: #5d4037;
+      transition: background 0.3s ease;
+    }
+
+    .links a:hover {
+      background-color: #ffecb3;
     }
   </style>
 </head>
 <body>
 
-  <h1>El Libro de las Luces</h1>
-  <ul>
-    <li><a href="nida1.es.html">Primera Llamada: La voz de Hora a la humanidad</a></li>
-      <li><a href="nida2.es.html">Segundo Llamado: Memoria de los Días Primeros</a></li>
-  </ul>
+  <nav class="lang-bar">
+    <a href="index.en.html">English</a>
+    <a href="index.fr.html">Français</a>
+    <a href="index.es.html">Español</a>
+    <a href="index.ar.html">العربية</a>
+    <a href="index.fa.html">فارسی</a>
+  </nav>
 
-  <div class="nav">
-    <a href="../index.es.html">Volver a la página principal de Horia</a>
-  </div>
+  <header>
+    <h1>Libro de la Luz</h1>
+    <p>Aquí puedes leer los Nedás publicados.</p>
+  </header>
+
+  <section class="links">
+    <a href="neda1.es.html">Primer Neda: Canto del Comienzo</a>
+    <a href="neda2.es.html">Segundo Neda: Los Primeros Días</a>
+    <a href="neda3.es.html">Tercer Neda: Ahora, Tu Espejo</a>
+    <a href="neda4.es.html">Cuarto Neda: Más Allá del Paso</a>
+    <a href="neda5.es.html">Quinto Neda: Sabiduría Colectiva</a>
+  </section>
 
 </body>
 </html>
