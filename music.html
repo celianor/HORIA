@@ -64,24 +64,24 @@
       justify-content: center;
       gap: 2.5rem;
       flex-wrap: wrap;
-      max-width: 700px;
+      max-width: 600px;
       margin-bottom: 2rem;
     }
 
     .icon {
       width: 100px;
       height: 100px;
+      object-fit: cover;
+      border-radius: 12px;
       cursor: pointer;
       box-shadow: 0 0 8px rgba(0,0,0,0.7);
       transition: transform 0.25s ease, box-shadow 0.25s ease;
-      border-radius: 12px;
-      background-color: #f0a500;
-      padding: 12px;
     }
 
-    .icon:hover {
+    .icon:hover, .icon:focus {
       transform: scale(1.15);
       box-shadow: 0 0 15px #f0a500;
+      outline: none;
     }
 
     #player {
@@ -91,6 +91,7 @@
       border-radius: 10px;
       box-shadow: 0 0 15px rgba(240,165,0,0.7);
       margin-top: 1rem;
+      background: rgba(0,0,0,0.6);
     }
 
     #now-playing {
@@ -120,6 +121,22 @@
       background-color: rgba(240,165,0,0.8);
       color: #222;
     }
+
+    /* Icon captions */
+    .caption {
+      color: #ffd;
+      font-weight: 600;
+      margin-top: 0.5rem;
+      font-size: 0.9rem;
+      text-shadow: 1px 1px 3px #000;
+    }
+
+    .music-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 120px;
+    }
   </style>
 </head>
 <body>
@@ -135,29 +152,26 @@
   <h1>MUSIC</h1>
 
   <nav aria-label="Music selections">
+    <div class="music-item">
+      <img src="img/nature_icon.jpg.JPG" alt="Nature Soundscape Icon" class="icon"
+           onclick="playMusic('music/1.mp3', 'Nature Soundscape – Calm and soothing')" tabindex="0"
+           onkeypress="if(event.key==='Enter'){playMusic('music/1.mp3', 'Nature Soundscape – Calm and soothing')}"/>
+      <div class="caption">Nature Soundscape</div>
+    </div>
 
-    <!-- آیکون Peaceful Piano -->
-    <svg tabindex="0" role="img" aria-label="Peaceful Piano" class="icon" onclick="playMusic('music/peaceful_piano.mp3', 'Peaceful Piano')" onkeypress="if(event.key==='Enter'){playMusic('music/peaceful_piano.mp3', 'Peaceful Piano')} " viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <rect x="8" y="20" width="48" height="24" rx="4" ry="4" fill="#f0a500" stroke="#fff" stroke-width="2"/>
-      <rect x="16" y="20" width="8" height="24" fill="#fff"/>
-      <rect x="32" y="20" width="8" height="24" fill="#fff"/>
-      <rect x="48" y="20" width="8" height="24" fill="#fff"/>
-    </svg>
+    <div class="music-item">
+      <img src="img/piano_icon.jpg.JPG" alt="Piano Instrumental Icon" class="icon"
+           onclick="playMusic('music/2.mp3', 'Piano Instrumental – Peaceful and deep')" tabindex="0"
+           onkeypress="if(event.key==='Enter'){playMusic('music/2.mp3', 'Piano Instrumental – Peaceful and deep')}"/>
+      <div class="caption">Piano Instrumental</div>
+    </div>
 
-    <!-- آیکون Spiritual Awakening -->
-    <svg tabindex="0" role="img" aria-label="Spiritual Awakening" class="icon" onclick="playMusic('music/spiritual_awakening.mp3', 'Spiritual Awakening')" onkeypress="if(event.key==='Enter'){playMusic('music/spiritual_awakening.mp3', 'Spiritual Awakening')} " viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M32 12C20 28 12 44 32 52C52 44 44 28 32 12Z" fill="#f0a500" stroke="#fff" stroke-width="2"/>
-      <path d="M32 12L32 52" stroke="#fff" stroke-width="2"/>
-      <circle cx="32" cy="20" r="4" fill="#fff"/>
-    </svg>
-
-    <!-- آیکون Epic Music World -->
-    <svg tabindex="0" role="img" aria-label="Epic Music World" class="icon" onclick="window.open('https://www.youtube.com/playlist?list=YOUR_PLAYLIST_ID','_blank')" onkeypress="if(event.key==='Enter'){window.open('https://www.youtube.com/playlist?list=YOUR_PLAYLIST_ID','_blank')}" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="32" cy="32" r="28" fill="#f0a500" stroke="#fff" stroke-width="2"/>
-      <path d="M24 44L40 32L24 20V44Z" fill="#fff"/>
-      <circle cx="32" cy="32" r="12" stroke="#fff" stroke-width="2"/>
-    </svg>
-
+    <div class="music-item">
+      <img src="img/Ney_icon.jpg" alt="Ney Flute Melody Icon" class="icon"
+           onclick="playMusic('music/Ney.mp3', 'Ney Flute Melody – Spiritual and serene')" tabindex="0"
+           onkeypress="if(event.key==='Enter'){playMusic('music/Ney.mp3', 'Ney Flute Melody – Spiritual and serene')}"/>
+      <div class="caption">Ney Flute Melody</div>
+    </div>
   </nav>
 
   <audio id="player" controls aria-label="Music player"></audio>
