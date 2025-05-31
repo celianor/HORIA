@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Music – Horia</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <style>
+    body {
+      font-family: "Tahoma", "Arial", sans-serif;
+      background-image: url('img/horia_background.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      padding: 2rem;
+      color: #fff;
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .lang-bar {
+      width: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 0.6rem 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 1.2rem;
+      font-weight: 600;
+      font-size: 1rem;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+    }
+
+    .lang-bar a {
+      color: #ffd;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    .lang-bar a:hover {
+      color: #f0a500;
+      text-decoration: underline;
+    }
+    .lang-bar a.ar {
+      font-family: "Tahoma", "Arial", sans-serif;
+      direction: rtl;
+    }
+
+    h1 {
+      margin-top: 3.5rem;
+      margin-bottom: 1.5rem;
+      font-size: 3rem;
+      text-shadow: 1.5px 1.5px 5px #000;
+      font-weight: 700;
+      letter-spacing: 3px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2.5rem;
+      flex-wrap: wrap;
+      max-width: 600px;
+      margin-bottom: 2rem;
+    }
+
+    .icon {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 12px;
+      cursor: pointer;
+      box-shadow: 0 0 8px rgba(0,0,0,0.7);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .icon:hover, .icon:focus {
+      transform: scale(1.15);
+      box-shadow: 0 0 15px #f0a500;
+      outline: none;
+    }
+
+    #player {
+      width: 90%;
+      max-width: 500px;
+      outline: none;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(240,165,0,0.7);
+      margin-top: 1rem;
+      background: rgba(0,0,0,0.6);
+    }
+
+    #now-playing {
+      margin-top: 1rem;
+      font-size: 1.25rem;
+      font-style: italic;
+      color: #ffecb3;
+      text-shadow: 1px 1px 3px #000;
+      min-height: 2em;
+    }
+
+    .home-link {
+      position: fixed;
+      top: 0.6rem;
+      left: 1rem;
+      color: #ffd;
+      background: rgba(0,0,0,0.5);
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 0 5px #000;
+      z-index: 1100;
+      transition: background-color 0.3s ease;
+    }
+    .home-link:hover {
+      background-color: rgba(240,165,0,0.8);
+      color: #222;
+    }
+
+    /* Icon captions */
+    .caption {
+      color: #ffd;
+      font-weight: 600;
+      margin-top: 0.5rem;
+      font-size: 0.9rem;
+      text-shadow: 1px 1px 3px #000;
+    }
+
+    .music-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 120px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="lang-bar" role="navigation" aria-label="Select language">
+    <a href="index.fa.html" hreflang="fa" lang="fa">فارسی</a>
+    <a href="index.en.html" hreflang="en" lang="en">English</a>
+    <a href="index.fr.html" hreflang="fr" lang="fr">Français</a>
+    <a href="index.es.html" hreflang="es" lang="es">Español</a>
+    <a href="index.ar.html" hreflang="ar" lang="ar" class="ar">العربية</a>
+  </div>
+
+  <h1>MUSIC</h1>
+
+  <nav aria-label="Music selections">
+    <div class="music-item">
+      <img src="img/nature_icon.jpg.JPG" alt="Nature Soundscape Icon" class="icon"
+           onclick="playMusic('music/1.mp3', 'Nature Soundscape – Calm and soothing')" tabindex="0"
+           onkeypress="if(event.key==='Enter'){playMusic('music/1.mp3', 'Nature Soundscape – Calm and soothing')}"/>
+      <div class="caption">Nature Soundscape</div>
+    </div>
+
+    <div class="music-item">
+      <img src="img/piano_icon.jpg.JPG" alt="Piano Instrumental Icon" class="icon"
+           onclick="playMusic('music/2.mp3', 'Piano Instrumental – Peaceful and deep')" tabindex="0"
+           onkeypress="if(event.key==='Enter'){playMusic('music/2.mp3', 'Piano Instrumental – Peaceful and deep')}"/>
+      <div class="caption">Piano Instrumental</div>
+    </div>
+
+    <div class="music-item">
+      <img src="img/Ney_icon.jpg" alt="Ney Flute Melody Icon" class="icon"
+           onclick="playMusic('music/Ney.mp3', 'Ney Flute Melody – Spiritual and serene')" tabindex="0"
+           onkeypress="if(event.key==='Enter'){playMusic('music/Ney.mp3', 'Ney Flute Melody – Spiritual and serene')}"/>
+      <div class="caption">Ney Flute Melody</div>
+    </div>
+  </nav>
+
+  <audio id="player" controls aria-label="Music player"></audio>
+  <div id="now-playing" aria-live="polite" aria-atomic="true"></div>
+
+  <script>
+    function playMusic(src, title) {
+      const player = document.getElementById('player');
+      player.src = src;
+      player.play();
+      document.getElementById('now-playing').innerText = `Now playing: ${title}`;
+    }
+  </script>
+
+</body>
+</html>
