@@ -2,108 +2,133 @@
 <html lang="fa">
 <head>
   <meta charset="UTF-8" />
-  <title>هوریا - صفحه اصلی</title>
+  <title>هوریا - خانه عشق و خرد</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: "Tahoma", sans-serif;
-      background-color: #f0f7f0;
+      font-family: 'Vazirmatn', Tahoma, sans-serif;
+      background: linear-gradient(to bottom, #f0f7f0, #e0f2e0);
       margin: 0;
       padding: 0;
-      color: #333;
+      color: #2e7d32;
       direction: rtl;
+      line-height: 1.8;
     }
+
     .lang-bar {
       background-color: #c8e6c9;
-      padding: 0.5rem 0;
+      padding: 0.6rem 1rem;
       display: flex;
       justify-content: center;
-      gap: 1rem;
+      flex-wrap: wrap;
+      gap: 0.8rem;
       position: sticky;
       top: 0;
       z-index: 1000;
       border-bottom: 2px solid #a5d6a7;
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
     }
+
     .lang-bar a {
       color: #2e7d32;
       text-decoration: none;
       font-weight: 600;
-      padding: 0.3rem 0.6rem;
-      border-radius: 4px;
-      white-space: nowrap;
-      transition: color 0.3s ease;
-      font-size: 1rem;
+      padding: 0.4rem 0.8rem;
+      border-radius: 6px;
+      background-color: #e8f5e9;
+      transition: all 0.3s ease;
     }
+
     .lang-bar a:hover {
+      background-color: #a5d6a7;
       color: #1b5e20;
     }
-    @media (max-width: 480px) {
-      .lang-bar {
-        gap: 0.5rem;
-      }
-      .lang-bar a {
-        font-size: 0.85rem;
-        padding: 0.2rem 0.4rem;
-      }
-    }
+
     main {
-      max-width: 800px;
+      max-width: 900px;
       margin: 2rem auto;
-      padding: 0 1rem;
-      color: #4a7d4a;
-      text-align: right;
-      line-height: 1.8;
-      font-size: 1.1rem;
+      padding: 0 1.5rem;
+      background-color: #ffffffdd;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 80, 0, 0.1);
     }
+
     h1 {
-      color: #2e7d32;
+      text-align: center;
+      font-size: 2rem;
+      margin-top: 2rem;
       margin-bottom: 1rem;
-      font-size: 1.8rem;
-      text-align: center;
+      color: #256d2c;
     }
-    p {
-      font-weight: 600;
-      margin-bottom: 1.5rem;
+
+    p.subtext {
       text-align: center;
+      font-size: 1.2rem;
+      font-weight: 500;
+      margin-bottom: 2rem;
+      color: #4a7d4a;
     }
+
     .main-menu {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 1rem;
-      margin-bottom: 2rem;
+      gap: 1.2rem;
+      margin-bottom: 2.5rem;
     }
+
     .main-menu a {
       background-color: #a5d6a7;
       color: #1b5e20;
       text-decoration: none;
-      padding: 1rem 2rem;
-      border-radius: 8px;
+      padding: 1rem 1.8rem;
+      border-radius: 10px;
       font-weight: 700;
-      font-size: 1.1rem;
-      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
-      transition: background-color 0.3s ease;
-      min-width: 140px;
+      font-size: 1.05rem;
+      box-shadow: 0 4px 8px rgba(0, 60, 0, 0.1);
+      transition: all 0.3s ease;
+      min-width: 150px;
       text-align: center;
     }
+
     .main-menu a:hover {
       background-color: #81c784;
       color: #145214;
     }
+
     .subheader {
       text-align: center;
-      margin-bottom: 2rem;
-      font-size: 1rem;
       font-style: italic;
       color: #388e3c;
+      margin-bottom: 2rem;
     }
-    ol {
-      padding-right: 1.2rem;
+
+    .content {
+      padding: 1rem 0;
+      font-size: 1.05rem;
+      color: #3b5e3b;
     }
-    li {
+
+    .content ol {
+      padding-right: 1.5rem;
+      margin-top: 1rem;
+    }
+
+    .content li {
       margin-bottom: 0.8rem;
+      font-weight: 600;
+    }
+
+    @media (max-width: 600px) {
+      .main-menu {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .main-menu a {
+        width: 100%;
+        max-width: 90%;
+      }
     }
   </style>
 </head>
@@ -119,44 +144,46 @@
 
   <main>
     <h1>دین عشق و خرد</h1>
-    <p>اینجا سرایی است برای مهر، خرد، آزادی و روشنایی.</p>
+    <p class="subtext">اینجا سرایی است برای مهر، خرد، آزادی و روشنایی.</p>
 
     <div class="main-menu">
-      <a href="lightbook/index.fa.html">کتاب روشنی</a>
-      <a href="lit/index.fa.html">آثار و نوشته‌ها</a>
-      <a href="music.html">موسیقی</a>
-      <a href="Pray/index.fa.html">نیایش</a>
-      <a href="Story/index.fa.html">داستان</a>
-      <a href="contact.fa.html">تماس</a>
+      <a href="lightbook/index.fa.html">📖 کتاب روشنی</a>
+      <a href="lit/index.fa.html">📝 آثار و نوشته‌ها</a>
+      <a href="music.html">🎶 موسیقی</a>
+      <a href="Pray/index.fa.html">🙏 نیایش</a>
+      <a href="Story/index.fa.html">📚 داستان</a>
+      <a href="contact.fa.html">📩 تماس</a>
     </div>
 
     <div class="subheader">
-      در این وب‌سایت راه را به‌سوی خرد، مهر و آزادی می‌یابید. این گامی است بلند به سوی روشنایی‌.
+راهی به‌سوی خرد، مهر، آزادی و گامی به سوی روشنایی‌
     </div>
 
     <h1>به هوریا خوش آمدید</h1>
 
     <div class="content">
-      آیین هوریا، فلسفه‌ای است مبتنی بر شناخت بهتر از جهان و انسان و باور به خدای یگانه که هُرا نام دارد.  
-      هُرا خدای راستی، روشنی و داد است؛ سرچشمه‌ی همه‌ی نیکی‌ها و کمال‌ها، که هستی را در نوری بی‌پایان غرق کرده است و به همه چیز معنا می‌بخشد.  
-      خداوند، فراتر از هر تصویر ذهنی، بی‌زمان و بی‌مکان است و انسان را به پیمودن راه خرد و عشق دعوت می‌کند.
-
-      <br><br>
-
-      هوریا می‌گوید، انسان موجودی پیچیده و چندوجهی است که در چهارچوب سه جهان متوالی و پیوسته زندگی می‌کند:
-
+      <p>
+        دین هوریا بر آن است که پلی معنوی و فرهنگی میان میراث عرفانی بشر و آرمان‌های نوین انسانی بنا نهد.
+      </p>
+      <p>
+        در جهان امروز، که نیاز به آزادی فردی، خرد جمعی، صلح پایدار و همزیستی با طبیعت بیش از همیشه احساس می‌شود،
+        هوریا کوشیده است با بهره‌گیری از زبان و ساختارهای آشنا در ادیان سنتی، پیامی نو، سازنده و جهانی را در دل انسان‌ها بیدار کند.
+      </p>
+      <p>
+        هدف نهایی هوریا، تحقق اصول زیر از راه اقناع درونی و تجربه‌ی معنوی است:
+      </p>
       <ol>
-        <li>جهان پیشین: دنیایی معنوی و متعالی که روح انسان در آن آفریده شده و از آن برخاسته است.</li>
-        <li>جهان همین: دنیای مادی و زمان حال که عرصه‌ی اصلی آزمون، تجربه و رشد است.</li>
-        <li>جهان پسین: زندگی پس از مرگ، مرحله‌ای از تکامل و ادامه‌ی واقعی زندگی.</li>
+        <li>🌱 آزادی فردی بر بنیاد مسئولیت وجدانی</li>
+        <li>🧠 خرد جمعی و مشارکت همدلانه (از جمله دموکراسی مشارکتی و تصمیم‌سازی مشترک)</li>
+        <li>✌️ صلح‌طلبی و همزیستی جهانی</li>
+        <li>🌍 پاسداری از طبیعت به‌مثابه پیکر مادر هستی</li>
+        <li>🤝 برابری و کرامت ذاتی انسان‌ها بدون هیچ تمایزی از جنس، نژاد، عقیده یا زبان</li>
       </ol>
-
-      آیین هوریا بر این اصل تأکید دارد که انسان حامل خرد جمعی و مسئول حفظ کرامت خود و همه‌ی موجودات است.  
-      این آیین از انسان می‌خواهد که با شناخت خویشتن، پیوند با جهان پیشین، و تلاش برای بهتر شدن در جهان همین، خود را برای زندگانی جهان پسین آماده سازد.
-
-      <br><br>
-
-      آیین هوریا دین و یک روش زندگی است؛ روشی که انسان را در مسیر خودشناسی، همزیستی مسالمت‌آمیز با دیگر انسان‌ها و طبیعت، و گسترش عدالت و نیکی قرار می‌دهد؛ راهی که با نور هُرا روشن شده و به سوی آینده‌ای انسانی‌تر رهنمون می‌گردد.
+      <p>
+        هوریا باور دارد که دین، اگر به‌درستی بازسازی شود، می‌تواند نه ابزار سلطه، بلکه زبانی برای بیداری و همدلی جهانی باشد.
+        از این رو، این آیین از عناصر ساختاری ادیان (نیایش، آیین‌ها، نمادها، تقویم‌های مقدس، و مفاهیم متعالی) بهره می‌گیرد،
+        اما آن‌ها را در خدمت آزادی و آگاهی انسان بازآفرینی می‌کند.
+      </p>
     </div>
   </main>
 
