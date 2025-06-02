@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <title>آیین‌ها - هوریا</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: 'Vazirmatn', Arial, sans-serif;
+      background-color: #f4f9f4;
+      margin: 0;
+      padding: 0;
+      color: #2e4a2e;
+      direction: rtl;
+    }
+    .lang-bar {
+      background-color: #d0eed0;
+      padding: 0.5rem 0;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 2px solid #b2d8b2;
+      overflow-x: auto;
+    }
+    .lang-bar a {
+      color: #1e5e1e;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 0.3rem 0.6rem;
+      border-radius: 4px;
+      white-space: nowrap;
+    }
+    .lang-bar a:hover {
+      background-color: #a5d6a7;
+    }
+    header {
+      text-align: center;
+      padding: 2rem 1rem 1rem;
+    }
+    header h1 {
+      font-size: 2rem;
+      color: #2e7d32;
+      margin-bottom: 0.5rem;
+    }
+    header p {
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.8;
+    }
+    .section-title {
+      text-align: center;
+      margin: 3rem 0 1rem;
+      font-size: 1.5rem;
+      color: #33691e;
+    }
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 1rem;
+      padding: 1rem;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+    .card {
+      background-color: #e8f5e9;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+      text-align: center;
+      transition: transform 0.2s ease;
+    }
+    .card:hover {
+      transform: scale(1.02);
+    }
+    .card h3 {
+      margin: 0.5rem 0;
+      color: #2e7d32;
+      font-size: 1.2rem;
+    }
+    .card p {
+      font-size: 0.95rem;
+      color: #4e704e;
+    }
+    .suggest-box {
+      background-color: #f1f8e9;
+      border-top: 2px solid #aed581;
+      margin-top: 3rem;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+    .suggest-box h2 {
+      color: #558b2f;
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+    }
+    .suggest-box p {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+    .footer-quote {
+      text-align: center;
+      margin: 3rem 1rem 2rem;
+      font-style: italic;
+      color: #4e704e;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- نوار زبان‌ها -->
+  <nav class="lang-bar">
+    <a href="rituals.en.html">English</a>
+    <a href="rituals.fr.html">Français</a>
+    <a href="rituals.es.html">Español</a>
+    <a href="rituals.ar.html">العربية</a>
+    <a href="rituals.fa.html">فارسی</a>
+  </nav>
+
+  <!-- معرفی صفحه -->
+  <header>
+    <h1>آیین‌ها: ترجمه‌ی زندگی هوریایی</h1>
+    <p>
+      آیین‌ها در هوریا، تمرین‌هایی‌اند برای بازسازی درون و بیرون. نه فرمان‌اند، نه تشریفات؛ بلکه نشانه‌هایی از گفت‌وگوی انسان با هستی، با خویشتن، با هورا.
+      هر آیین، فرصتی است برای بازایستادن، نگریستن، و زیستن در آگاهی.
+    </p>
+  </header>
+
+  <!-- دسته آیین‌ها -->
+  <h2 class="section-title">آیین‌های روزانه</h2>
+  <div class="card-grid">
+    <div class="card">
+      <h3>آرامش هوریایی</h3>
+      <p>آغاز و پایان روز با نیایشی آرام، در سکوت دل و نگاهی به نیکی.</p>
+    </div>
+    <div class="card">
+      <h3>نگاه مهربان</h3>
+      <p>نیتی ساده برای دیدن زیبایی‌ها و نیکی‌ها پیش از شروع کارها.</p>
+    </div>
+    <div class="card">
+      <h3>بازنگری شبانه</h3>
+      <p>مرور اعمال و نیت‌ها برای فردایی روشن‌تر.</p>
+    </div>
+  </div>
+
+  <h2 class="section-title">آیین‌های سالانه و جمعی</h2>
+  <div class="card-grid">
+    <div class="card">
+      <h3>پنجه آغاز</h3>
+      <p>پنج روز بازسازی زندگی با نیت‌، مراقبه، و دگرگونی.</p>
+    </div>
+    <div class="card">
+      <h3>روز طبیعت</h3>
+      <p>۲۱ مارس، هم‌آغوشی با زمین و سکوت در دل درختان.</p>
+    </div>
+    <div class="card">
+      <h3>روز مهربانی</h3>
+      <p>روز همیاری و گفتگو درباره‌ی سهم ما در شادی جمعی.</p>
+    </div>
+  </div>
+
+  <h2 class="section-title">آیین‌های درونی و معنوی</h2>
+  <div class="card-grid">
+    <div class="card">
+      <h3>مراقبه در طبیعت</h3>
+      <p>یک تا سه روز سکوت، گوش دادن به جهان و یافتن خویش.</p>
+    </div>
+    <div class="card">
+      <h3>سفر بینش</h3>
+      <p>سفری درونی برای شناخت خود و حضور در جهان.</p>
+    </div>
+    <div class="card">
+      <h3>ندای نیم‌شب</h3>
+      <p>نیایشی شبانه برای لمس حضور هورا در دل شب.</p>
+    </div>
+  </div>
+
+  <!-- پیشنهاد آیین -->
+  <section class="suggest-box">
+    <h2>آیین تو چیست؟</h2>
+    <p>اگر در دل خود آیینی داری که با روح هوریا هماهنگ است، آن را با ما در میان بگذار.</p>
+    <p><strong>horiansho@gmail.com</strong></p>
+  </section>
+
+  <!-- نقل قول پایانی -->
+  <div class="footer-quote">
+    «هر آیین، چراغی است در مسیر بازگشت. و بازگشت، همان بیداری است.»
+  </div>
+
+</body>
+</html>
