@@ -3,37 +3,57 @@
 <head>
   <meta charset="UTF-8">
   <title>نیایش بامداد</title>
-  <style>
+    <style>
     body {
-      font-family: "Tahoma", "Vazirmatn", sans-serif;
-      background-color: #fdfcf9;
-      color: #333;
-      line-height: 2;
-      padding: 50px 20px;
-      max-width: 700px;
-      margin: auto;
+      font-family: 'Vazirmatn', sans-serif;
+      background-image: url('https://images.unsplash.com/photo-1549887534-4c3b7d3ec69b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      margin: 0;
+      padding: 0;
+      color: #fefefe;
     }
+
+    .overlay {
+      background-color: rgba(10, 10, 30, 0.6);
+      padding: 60px 10% 80px;
+      min-height: 100vh;
+    }
+
     h1 {
       text-align: center;
-      color: #5a2c14;
+      color: #fce7d7;
       margin-bottom: 40px;
+      font-size: 2.4em;
     }
+
     p {
-      text-align: justify;
-      margin: 10px 0;
+      margin-bottom: 24px;
+      font-size: 1.2em;
+      line-height: 2.4;
     }
-    .footer {
-      margin-top: 50px;
+
+    .navigation {
       text-align: center;
+      margin-top: 60px;
     }
-    a {
+
+    .navigation a {
       text-decoration: none;
-      color: #337788;
-      margin: 0 10px;
-      font-weight: bold;
+      color: #fff;
+      background-color: rgba(255, 255, 255, 0.2);
+      border: 1px solid #ddd;
+      padding: 10px 20px;
+      margin: 10px;
+      border-radius: 8px;
+      backdrop-filter: blur(4px);
+      transition: background-color 0.3s ease;
     }
-    a:hover {
-      color: #115566;
+
+    .navigation a:hover {
+      background-color: rgba(255, 255, 255, 0.4);
+      color: #000;
     }
   </style>
 </head>
