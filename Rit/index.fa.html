@@ -1,120 +1,74 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <title>آیین‌ها – هوریا</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <title>آیین‌های هوریایی</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn&display=swap" rel="stylesheet">
   <style>
     * { box-sizing: border-box; }
     body {
-      font-family: 'Tahoma', 'Vazirmatn', sans-serif;
-      background-color: #f4f9f4;
-      margin: 0;
-      padding: 0;
-      color: #2e4a2e;
+      font-family: 'Vazirmatn', sans-serif;
+      background-color: #f0f7f0;
+      margin: 0; padding: 0;
+      color: #333;
+      text-align: right;
+      direction: rtl;
     }
     .lang-bar {
-      background-color: #d0eed0;
+      background-color: #c8e6c9;
       padding: 0.5rem 0;
       display: flex;
       justify-content: center;
       gap: 1rem;
-      border-bottom: 2px solid #b2d8b2;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      direction: ltr;
+      border-bottom: 2px solid #a5d6a7;
     }
     .lang-bar a {
-      color: #1e5e1e;
+      color: #2e7d32;
       text-decoration: none;
       font-weight: 600;
       padding: 0.3rem 0.6rem;
       border-radius: 4px;
+      white-space: nowrap;
+      font-size: 1rem;
     }
     .lang-bar a:hover {
-      background-color: #a5d6a7;
+      color: #1b5e20;
     }
-    header {
-      text-align: center;
-      padding: 2rem 1rem 1rem;
+    main {
+      margin: 2rem auto;
+      max-width: 700px;
+      padding: 1rem;
     }
-    header h1 {
-      font-size: 2.2rem;
+    h1 {
       color: #2e7d32;
-      margin-bottom: 0.8rem;
-    }
-    header p {
-      font-size: 1.15rem;
-      max-width: 750px;
-      margin: 0 auto;
-      line-height: 1.8;
-    }
-    .section {
-      padding: 2rem 1rem;
-      max-width: 960px;
-      margin: 0 auto;
-    }
-    .section h2 {
       text-align: center;
-      font-size: 1.7rem;
-      color: #33691e;
-      margin-bottom: 1.2rem;
+      margin-bottom: 2rem;
     }
-    .card-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 1rem;
-    }
-    .card {
+    .ritual {
       background-color: #e8f5e9;
       padding: 1rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.06);
-      transition: transform 0.2s ease;
-    }
-    .card:hover {
-      transform: scale(1.02);
-    }
-    .card h3 {
-      color: #2e7d32;
-      margin-bottom: 0.5rem;
-    }
-    .card p {
-      font-size: 0.95rem;
-      color: #4e704e;
-      line-height: 1.6;
-    }
-    .quote {
-      font-style: italic;
-      color: #4e704e;
-      text-align: center;
-      margin: 3rem 1rem;
-    }
-    .suggest {
-      background-color: #f1f8e9;
-      padding: 2rem 1rem;
-      text-align: center;
-      margin-top: 3rem;
-      border-top: 2px solid #c5e1a5;
-    }
-    .suggest h3 {
-      color: #558b2f;
-      margin-bottom: 0.5rem;
-    }
-    .suggest p {
-      font-size: 1rem;
       margin-bottom: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
-    .suggest strong {
-      font-family: monospace;
-      color: #33691e;
+    .ritual h2 {
+      margin-top: 0;
+      color: #1b5e20;
+      font-size: 1.3rem;
+    }
+    .ritual .date {
+      font-size: 0.95rem;
+      color: #555;
+      margin-bottom: 0.5rem;
+    }
+    .ritual p {
+      margin: 0;
+      line-height: 1.7;
     }
   </style>
 </head>
 <body>
-
-  <!-- نوار زبان‌ها -->
   <nav class="lang-bar">
     <a href="rituals.en.html">English</a>
     <a href="rituals.fr.html">Français</a>
@@ -123,75 +77,51 @@
     <a href="rituals.fa.html">فارسی</a>
   </nav>
 
-  <!-- معرفی -->
-  <header>
-    <h1>آیین‌ها در آیین هوریا</h1>
-    <p>
-      آیین‌های هوریایی، فرمان نیستند؛ دعوت‌اند.<br>
-      فرصتی برای بیداری، برای بازگشت به آرامش درون و مهرورزی به بیرون.  
-      هر آیین، دو مسیر را روشن می‌کند: راهی به سوی آزادی و آشتی در درون،  
-      و راهی برای همراهی با دیگران، با گوناگونی اندیشه‌ها، و با زمین.
-    </p>
-  </header>
+  <main>
+    <h1>آیین‌های هوریایی</h1>
 
-  <!-- آیین‌های رشد فردی و آرامش -->
-  <section class="section">
-    <h2>۱. آیین‌های رشد درون و آرامش فردی</h2>
-    <div class="card-grid">
-      <div class="card">
-        <h3>آرامش هوریایی</h3>
-        <p>مکثی صبحگاهی و شبانه برای روشنایی دل، اعتماد به خویشتن و نیت نیک.</p>
-      </div>
-      <div class="card">
-        <h3>نگاه مهربان</h3>
-        <p>دعایی ساده برای آغاز روز: «امروز، زیبایی را در آنچه می‌پرورم خواهم دید.»</p>
-      </div>
-      <div class="card">
-        <h3>ندای نیم‌شب</h3>
-        <p>رازگویی در سکوت شب؛ شنیدن ندای خداوند در ژرفای دل.</p>
-      </div>
-      <div class="card">
-        <h3>سفر بینش</h3>
-        <p>مسیر خودشناسی و کشف وجدان، برای آگاهی از آزادی مقدس خود.</p>
-      </div>
+    <div class="ritual">
+      <h2>روز مهربانی</h2>
+      <div class="date">یکشنبه اول اکتبر</div>
+      <p>روز تأمل درباره مهربانی و مسئولیت اجتماعی، همیاری و سخاوت فردی و جمعی.</p>
     </div>
-  </section>
 
-  <!-- آیین‌های جمعی و زیست‌محیطی -->
-  <section class="section">
-    <h2>۲. آیین‌های همراهی با دیگران و طبیعت</h2>
-    <div class="card-grid">
-      <div class="card">
-        <h3>روز مهربانی</h3>
-        <p>روزی سالانه برای نیکوکاری، هم‌اندیشی و برنامه‌ریزی جمعی برای مهربانی پایدار.</p>
-      </div>
-      <div class="card">
-        <h3>پنجه‌ی آغاز</h3>
-        <p>پنج روز بازسازی زندگی با هدف هماهنگی با نیت، جمع و زمین.</p>
-      </div>
-      <div class="card">
-        <h3>روز طبیعت</h3>
-        <p>۲۱ مارس: یک روز کامل حضور در میان درختان و آسمان، در سکوت و آرامش.</p>
-      </div>
-      <div class="card">
-        <h3>خلوت در طبیعت</h3>
-        <p>یک تا سه روز سکوت و تنهایی آگاهانه در دل طبیعت؛ پیوند دوباره با خویش و زمین.</p>
-      </div>
+    <div class="ritual">
+      <h2>پنجه‌ی آغاز</h2>
+      <div class="date">۸ تا ۱۲ فوریه</div>
+      <p>پنج‌روزه‌ی بازسازی زندگی، نگاهی نو به خود، جهان و آینده.</p>
     </div>
-  </section>
 
-  <!-- نقل قول الهام‌بخش -->
-  <div class="quote">
-    «آیین، اجبار نیست؛ دعوت است.  
-    بازگشتی به خویش، گشایشی به دیگری، و گامی نرم با زمین.»
-  </div>
+    <div class="ritual">
+      <h2>روز طبیعت</h2>
+      <div class="date">۲۱ مارس</div>
+      <p>بزرگداشت زمین و پیوند با طبیعت، با آیین‌هایی در فضای باز.</p>
+    </div>
 
-  <!-- پیشنهاد آیین جدید -->
-  <div class="suggest">
-    <h3>آیینی در دل داری که با روح هوریا سازگار است؟</h3>
-    <p>با ما در میان بگذار. شاید آیین فردا از دل تو برخیزد.</p>
-    <p><strong>horiansho@gmail.com</strong></p>
-  </div>
+    <div class="ritual">
+      <h2>تنهایی و آرامش</h2>
+      <div class="date">یک تا سه روز در سال (انتخابی)</div>
+      <p>خلوت، مراقبه و سکوت در دل طبیعت یا فضای سبز شهری.</p>
+    </div>
 
+    <div class="ritual">
+      <h2>جشن گل</h2>
+      <div class="date">۱۵ تا ۲۰ آوریل</div>
+      <p>ستایش زیبایی، دوستی و شکوفایی بهاری.</p>
+    </div>
+
+    <div class="ritual">
+      <h2>جشن مهرورزی به نزدیکان</h2>
+      <div class="date">یکشنبه اول ژوئن</div>
+      <p>دیدار و مهربانی با خانواده، دوستان، همسایگان و همکاران.</p>
+    </div>
+
+    <div class="ritual">
+      <h2>جشن هنر</h2>
+      <div class="date">جمعه اول نوامبر</div>
+      <p>زمان آفرینش و نمایش هنر؛ از شعر و موسیقی تا طراحی و بازیگری.</p>
+    </div>
+
+  </main>
 </body>
 </html>
