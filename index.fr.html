@@ -2,119 +2,132 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <title>Horia - Accueil</title>
+  <title>Horia - La maison de l’amour et de la sagesse</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #f0f7f0;
+      font-family: 'Vazirmatn', Tahoma, sans-serif;
+      background: linear-gradient(to bottom, #f0f7f0, #e0f2e0);
       margin: 0;
       padding: 0;
-      color: #333;
-      text-align: center;
+      color: #2e7d32;
+      line-height: 1.8;
     }
+
     .lang-bar {
       background-color: #c8e6c9;
-      padding: 0.5rem 0;
+      padding: 0.6rem 1rem;
       display: flex;
       justify-content: center;
-      gap: 1rem;
+      flex-wrap: wrap;
+      gap: 0.8rem;
       position: sticky;
       top: 0;
       z-index: 1000;
       border-bottom: 2px solid #a5d6a7;
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
     }
+
     .lang-bar a {
       color: #2e7d32;
       text-decoration: none;
       font-weight: 600;
-      padding: 0.3rem 0.6rem;
-      border-radius: 4px;
-      white-space: nowrap;
-      transition: color 0.3s ease;
-      font-size: 1rem;
+      padding: 0.4rem 0.8rem;
+      border-radius: 6px;
+      background-color: #e8f5e9;
+      transition: all 0.3s ease;
     }
+
     .lang-bar a:hover {
+      background-color: #a5d6a7;
       color: #1b5e20;
     }
-    @media (max-width: 480px) {
-      .lang-bar {
-        gap: 0.5rem;
-      }
-      .lang-bar a {
-        font-size: 0.85rem;
-        padding: 0.2rem 0.4rem;
-      }
-    }
+
     main {
-      margin: 2rem 1rem;
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
-      color: #4a7d4a;
-      text-align: left;
-      line-height: 1.8;
-      font-size: 1.1rem;
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1.5rem;
+      background-color: #ffffffdd;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 80, 0, 0.1);
     }
+
     h1 {
-      color: #2e7d32;
-      margin-bottom: 0.5rem;
       text-align: center;
+      font-size: 2rem;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      color: #256d2c;
     }
-    p {
-      font-weight: 600;
-      font-size: 1.1rem;
-      line-height: 1.5;
+
+    p.subtext {
+      text-align: center;
+      font-size: 1.2rem;
+      font-weight: 500;
       margin-bottom: 2rem;
-      text-align: center;
+      color: #4a7d4a;
     }
+
     .main-menu {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 1rem;
-      margin-bottom: 2rem;
+      gap: 1.2rem;
+      margin-bottom: 2.5rem;
     }
+
     .main-menu a {
       background-color: #a5d6a7;
       color: #1b5e20;
       text-decoration: none;
-      padding: 1rem 2rem;
-      border-radius: 8px;
+      padding: 1rem 1.8rem;
+      border-radius: 10px;
       font-weight: 700;
-      font-size: 1.1rem;
-      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
-      transition: background-color 0.3s ease;
-      min-width: 140px;
+      font-size: 1.05rem;
+      box-shadow: 0 4px 8px rgba(0, 60, 0, 0.1);
+      transition: all 0.3s ease;
+      min-width: 150px;
+      text-align: center;
     }
+
     .main-menu a:hover {
       background-color: #81c784;
       color: #145214;
     }
-    @media (max-width: 480px) {
-      .main-menu a {
-        font-size: 1rem;
-        padding: 0.8rem 1.5rem;
-        min-width: 120px;
-      }
-    }
+
     .subheader {
       text-align: center;
-      margin-bottom: 2rem;
-      font-size: 1rem;
       font-style: italic;
       color: #388e3c;
+      margin-bottom: 2rem;
     }
+
     .content {
-      margin-top: 2rem;
+      padding: 1rem 0;
+      font-size: 1.05rem;
+      color: #3b5e3b;
     }
-    ol {
-      padding-left: 1.2rem;
+
+    .content ol {
+      padding-left: 1.5rem;
+      margin-top: 1rem;
     }
-    li {
+
+    .content li {
       margin-bottom: 0.8rem;
+      font-weight: 600;
+    }
+
+    @media (max-width: 600px) {
+      .main-menu {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .main-menu a {
+        width: 100%;
+        max-width: 90%;
+      }
     }
   </style>
 </head>
@@ -129,46 +142,47 @@
   </nav>
 
   <main>
-    <h1>La Religion de l'Amour et de la Raison</h1>
-    <p>Voici une demeure pour la compassion, la raison, la liberté et la lumière.</p>
+    <h1>La religion de l’amour et de la sagesse</h1>
+    <p class="subtext"> Un foyer pour l’amour, la sagesse, la liberté et la lumière </p>
 
     <div class="main-menu">
-      <a href="lightbook/index.fr.html">Livre de Lumière</a>
-      <a href="lit/index.fr.html">Écrits</a>
-      <a href="music.html">Musique</a>
-      <a href="Pray/index.fr.html">Prière</a>
-      <a href="Story/index.fr.html">Histoires</a>
-      <a href="contact.fr.html">Contact</a>
+      <a href="lightbook/index.fr.html">📖 Livre de la Lumière</a>
+      <a href="lit/index.fr.html">📝 Textes et écrits</a>
+      <a href="music.html">🎶 Musique</a>
+      <a href="Pray/index.fr.html">🙏 Prières</a>
+      <a href="Story/index.fr.html">📚 Histoires</a>
+      <a href="contact.fr.html">📩 Contact</a>
     </div>
 
     <div class="subheader">
-      Ici, vous trouverez un chemin vers la sagesse, la compassion et la liberté — un pas audacieux vers la lumière.
+Un chemin vers la sagesse, l’amour, la liberté — et un pas vers la lumière.
     </div>
 
     <h1>Bienvenue à Horia</h1>
 
     <div class="content">
-      Horia est une philosophie fondée sur une meilleure compréhension du monde et de l'être humain, et sur la foi en un Dieu unique, nommé Hora.  
-      Hora est le Dieu de la vérité, de la lumière et de la justice — la source de toute bonté et perfection, qui baigne l'existence dans une lumière infinie et donne un sens à toutes choses.  
-      Dieu est au-delà de toute image mentale, au-delà du temps et de l'espace, nous appelant au chemin de l'amour et de la raison.
-
-      <br><br>
-
-      Horia enseigne que l'être humain est un être complexe et multidimensionnel vivant à travers trois royaumes continus :
-
+      <p>
+        Horia cherche à établir un pont spirituel et culturel entre l’héritage mystique de l’humanité et les idéaux modernes.
+      </p>
+      <p>
+        Dans un monde où le besoin de liberté individuelle, d’intelligence collective, de paix durable et de coexistence avec la nature est plus pressant que jamais,  
+        Horia tente d’éveiller un message nouveau, universel et constructif au cœur de chacun, en utilisant un langage familier inspiré des religions traditionnelles.
+      </p>
+      <p>
+        L’objectif ultime de Horia est de réaliser les principes suivants à travers la conviction intérieure et l’expérience spirituelle :
+      </p>
       <ol>
-        <li><strong>Le Monde Précédent :</strong> un royaume spirituel et transcendant où l'âme a été créée et d'où elle provient.</li>
-        <li><strong>Le Monde Présent :</strong> le monde physique et matériel — le domaine de l'expérience, de la lutte et de la croissance.</li>
-        <li><strong>Le Monde Suivant :</strong> la vie après la mort, une étape d'évolution supplémentaire et la continuation de l'existence réelle.</li>
+        <li>🌱 Liberté individuelle fondée sur la responsabilité de la conscience</li>
+        <li>🧠 Intelligence collective et participation solidaire (y compris démocratie participative)</li>
+        <li>✌️ Pacifisme et coexistence globale</li>
+        <li>🌍 Protection de la nature comme corps de la Mère de l’existence</li>
+        <li>🤝 Égalité et dignité inhérente de tous les êtres humains, sans distinction de genre, race, croyance ou langue</li>
       </ol>
-
-      Horia souligne que les humains sont porteurs de raison collective et responsables de la dignité d'eux-mêmes et de tous les êtres.  
-      Il nous invite à la connaissance de soi, à nous reconnecter avec le monde précédent, et à nous efforcer de faire le bien dans le monde présent en préparation du monde à venir.
-
-      <br><br>
-
-      Horia est à la fois une foi et un mode de vie — qui nous appelle à la conscience de soi, à la coexistence pacifique et à la diffusion de la justice et de la bonté.  
-      C'est un chemin éclairé par Hora, menant vers un avenir plus humain.
+      <p>
+        Horia croit que la religion, si elle est reconstruite avec justesse, peut devenir un langage d’éveil et de solidarité mondiale, et non un outil de domination.  
+        C’est pourquoi cette voie spirituelle utilise les éléments structurels des religions (prières, rituels, symboles, calendriers sacrés, concepts élevés)  
+        mais les réinvente au service de la liberté et de la conscience humaine.
+      </p>
     </div>
   </main>
 
