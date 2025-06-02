@@ -9,7 +9,7 @@
     * { box-sizing: border-box; }
     body {
       font-family: 'Vazirmatn', sans-serif;
-      background-color: #f0f7f0;
+      background-color: #f9fff9;
       margin: 0; padding: 0;
       color: #333;
       text-align: right;
@@ -40,27 +40,29 @@
       max-width: 700px;
       padding: 1rem;
     }
-    h1 {
+    h1, h2 {
       color: #2e7d32;
       text-align: center;
-      margin-bottom: 2rem;
+    }
+    .section {
+      margin-top: 3rem;
     }
     .ritual {
       background-color: #e8f5e9;
       padding: 1rem;
       margin-bottom: 1rem;
       border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
     }
-    .ritual h2 {
+    .ritual h3 {
       margin-top: 0;
       color: #1b5e20;
-      font-size: 1.3rem;
+      font-size: 1.2rem;
     }
     .ritual .date {
-      font-size: 0.95rem;
+      font-size: 0.9rem;
       color: #555;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.4rem;
     }
     .ritual p {
       margin: 0;
@@ -80,48 +82,75 @@
   <main>
     <h1>آیین‌های هوریایی</h1>
 
-    <div class="ritual">
-      <h2>روز مهربانی</h2>
-      <div class="date">یکشنبه اول اکتبر</div>
-      <p>روز تأمل درباره مهربانی و مسئولیت اجتماعی، همیاری و سخاوت فردی و جمعی.</p>
+    <div class="section">
+      <h2>آیین‌های فردی</h2>
+
+      <div class="ritual">
+        <h3>نیایش بامدادی و شامگاهی</h3>
+        <p>آغازی آرام برای روز و پایانی اندیشمندانه در شب، همراه با گفت‌وگو با هورا.</p>
+      </div>
+
+      <div class="ritual">
+        <h3>لبخند روزانه</h3>
+        <p>تلاش آگاهانه برای لبخند زدن به دیگران، حتی در دشوارترین لحظات.</p>
+      </div>
+
+      <div class="ritual">
+        <h3>خوش‌رویی</h3>
+        <p>برخورد محترمانه، صمیمی و گرم با اطرافیان، به‌ویژه در برابر بی‌مهری‌ها.</p>
+      </div>
+
+      <div class="ritual">
+        <h3>یاری به همنوع</h3>
+        <p>کمک آگاهانه و بی‌منت به دیگران، حتی با ساده‌ترین اعمال کوچک روزمره.</p>
+      </div>
     </div>
 
-    <div class="ritual">
-      <h2>پنجه‌ی آغاز</h2>
-      <div class="date">۸ تا ۱۲ فوریه</div>
-      <p>پنج‌روزه‌ی بازسازی زندگی، نگاهی نو به خود، جهان و آینده.</p>
-    </div>
+    <div class="section">
+      <h2>آیین‌های جمعی</h2>
 
-    <div class="ritual">
-      <h2>روز طبیعت</h2>
-      <div class="date">۲۱ مارس</div>
-      <p>بزرگداشت زمین و پیوند با طبیعت، با آیین‌هایی در فضای باز.</p>
-    </div>
+      <div class="ritual">
+        <h3>روز مهربانی</h3>
+        <div class="date">یکشنبه اول اکتبر</div>
+        <p>یادآوری مهربانی و همبستگی، با تمرکز بر نیکوکاری عمومی.</p>
+      </div>
 
-    <div class="ritual">
-      <h2>تنهایی و آرامش</h2>
-      <div class="date">یک تا سه روز در سال (انتخابی)</div>
-      <p>خلوت، مراقبه و سکوت در دل طبیعت یا فضای سبز شهری.</p>
-    </div>
+      <div class="ritual">
+        <h3>پنجه‌ی آغاز</h3>
+        <div class="date">۸ تا ۱۲ فوریه</div>
+        <p>پنج روز بازسازی درونی، آغاز دوباره و اندیشیدن به زیست آگاهانه.</p>
+      </div>
 
-    <div class="ritual">
-      <h2>جشن گل</h2>
-      <div class="date">۱۵ تا ۲۰ آوریل</div>
-      <p>ستایش زیبایی، دوستی و شکوفایی بهاری.</p>
-    </div>
+      <div class="ritual">
+        <h3>روز طبیعت</h3>
+        <div class="date">۲۱ مارس</div>
+        <p>بزرگداشت مادر زمین و بازگشت نمادین به ریشه‌های زیستی.</p>
+      </div>
 
-    <div class="ritual">
-      <h2>جشن مهرورزی به نزدیکان</h2>
-      <div class="date">یکشنبه اول ژوئن</div>
-      <p>دیدار و مهربانی با خانواده، دوستان، همسایگان و همکاران.</p>
-    </div>
+      <div class="ritual">
+        <h3>تنهایی و آرامش</h3>
+        <div class="date">یک تا سه روز در سال (انتخابی)</div>
+        <p>خلوت شخصی در طبیعت برای مراقبه، بازیابی و توازن روان.</p>
+      </div>
 
-    <div class="ritual">
-      <h2>جشن هنر</h2>
-      <div class="date">جمعه اول نوامبر</div>
-      <p>زمان آفرینش و نمایش هنر؛ از شعر و موسیقی تا طراحی و بازیگری.</p>
-    </div>
+      <div class="ritual">
+        <h3>جشن گل</h3>
+        <div class="date">۱۵ تا ۲۰ آوریل</div>
+        <p>پاسداشت زیبایی، دوستی و شکوفایی بهاری.</p>
+      </div>
 
+      <div class="ritual">
+        <h3>جشن مهرورزی به نزدیکان</h3>
+        <div class="date">یکشنبه اول ژوئن</div>
+        <p>روز دیدار و نیکی به خانواده، دوستان، همسایگان و همکاران.</p>
+      </div>
+
+      <div class="ritual">
+        <h3>جشن هنر</h3>
+        <div class="date">جمعه اول نوامبر</div>
+        <p>زمان آفرینش، نمایش و درک هنر، به‌عنوان زبان پیوند انسان با جهان.</p>
+      </div>
+    </div>
   </main>
 </body>
 </html>
