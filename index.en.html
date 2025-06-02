@@ -2,108 +2,133 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Horia - Home</title>
+  <title>Horia – Home of Love and Wisdom</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: "Tahoma", sans-serif;
-      background-color: #f0f7f0;
+      font-family: 'Vazirmatn', Tahoma, sans-serif;
+      background: linear-gradient(to bottom, #f0f7f0, #e0f2e0);
       margin: 0;
       padding: 0;
-      color: #333;
+      color: #2e7d32;
       direction: ltr;
+      line-height: 1.8;
     }
+
     .lang-bar {
       background-color: #c8e6c9;
-      padding: 0.5rem 0;
+      padding: 0.6rem 1rem;
       display: flex;
       justify-content: center;
-      gap: 1rem;
+      flex-wrap: wrap;
+      gap: 0.8rem;
       position: sticky;
       top: 0;
       z-index: 1000;
       border-bottom: 2px solid #a5d6a7;
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
     }
+
     .lang-bar a {
       color: #2e7d32;
       text-decoration: none;
       font-weight: 600;
-      padding: 0.3rem 0.6rem;
-      border-radius: 4px;
-      white-space: nowrap;
-      transition: color 0.3s ease;
-      font-size: 1rem;
+      padding: 0.4rem 0.8rem;
+      border-radius: 6px;
+      background-color: #e8f5e9;
+      transition: all 0.3s ease;
     }
+
     .lang-bar a:hover {
+      background-color: #a5d6a7;
       color: #1b5e20;
     }
-    @media (max-width: 480px) {
-      .lang-bar {
-        gap: 0.5rem;
-      }
-      .lang-bar a {
-        font-size: 0.85rem;
-        padding: 0.2rem 0.4rem;
-      }
-    }
+
     main {
-      max-width: 800px;
+      max-width: 900px;
       margin: 2rem auto;
-      padding: 0 1rem;
-      color: #4a7d4a;
-      text-align: left;
-      line-height: 1.8;
-      font-size: 1.1rem;
+      padding: 0 1.5rem;
+      background-color: #ffffffdd;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 80, 0, 0.1);
     }
+
     h1 {
-      color: #2e7d32;
+      text-align: center;
+      font-size: 2rem;
+      margin-top: 2rem;
       margin-bottom: 1rem;
-      font-size: 1.8rem;
-      text-align: center;
+      color: #256d2c;
     }
-    p {
-      font-weight: 600;
-      margin-bottom: 1.5rem;
+
+    p.subtext {
       text-align: center;
+      font-size: 1.2rem;
+      font-weight: 500;
+      margin-bottom: 2rem;
+      color: #4a7d4a;
     }
+
     .main-menu {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 1rem;
-      margin-bottom: 2rem;
+      gap: 1.2rem;
+      margin-bottom: 2.5rem;
     }
+
     .main-menu a {
       background-color: #a5d6a7;
       color: #1b5e20;
       text-decoration: none;
-      padding: 1rem 2rem;
-      border-radius: 8px;
+      padding: 1rem 1.8rem;
+      border-radius: 10px;
       font-weight: 700;
-      font-size: 1.1rem;
-      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
-      transition: background-color 0.3s ease;
-      min-width: 140px;
+      font-size: 1.05rem;
+      box-shadow: 0 4px 8px rgba(0, 60, 0, 0.1);
+      transition: all 0.3s ease;
+      min-width: 150px;
       text-align: center;
     }
+
     .main-menu a:hover {
       background-color: #81c784;
       color: #145214;
     }
+
     .subheader {
       text-align: center;
-      margin-bottom: 2rem;
-      font-size: 1rem;
       font-style: italic;
       color: #388e3c;
+      margin-bottom: 2rem;
     }
-    ol {
-      padding-left: 1.2rem;
+
+    .content {
+      padding: 1rem 0;
+      font-size: 1.05rem;
+      color: #3b5e3b;
     }
-    li {
+
+    .content ol {
+      padding-left: 1.5rem;
+      margin-top: 1rem;
+    }
+
+    .content li {
       margin-bottom: 0.8rem;
+      font-weight: 600;
+    }
+
+    @media (max-width: 600px) {
+      .main-menu {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .main-menu a {
+        width: 100%;
+        max-width: 90%;
+      }
     }
   </style>
 </head>
@@ -118,46 +143,47 @@
   </nav>
 
   <main>
-    <h1>The Religion of Love and Reason</h1>
-    <p>This is a home for compassion, reason, freedom, and light.</p>
+    <h1>The Religion of Love and Wisdom</h1>
+    <p class="subtext">A sanctuary for compassion, reason, freedom, and illumination</p>
 
     <div class="main-menu">
-      <a href="lightbook/index.en.html">Book of Light</a>
-      <a href="lit/index.en.html">Writings</a>
-      <a href="music.html">Music</a>
-      <a href="Pray/index.en.html">Prayer</a>
-      <a href="Story/index.en.html">Stories</a>
-      <a href="contact.en.html">Contact</a>
+      <a href="lightbook/index.en.html">📖 Lightbook</a>
+      <a href="lit/index.en.html">📝 Texts & Writings</a>
+      <a href="music.html">🎶 Music</a>
+      <a href="Pray/index.en.html">🙏 Prayers</a>
+      <a href="Story/index.en.html">📚 Stories</a>
+      <a href="contact.en.html">📩 Contact</a>
     </div>
 
     <div class="subheader">
-      Here you’ll find a path to wisdom, compassion, and freedom — a bold step toward light.
+      A path to wisdom, compassion, freedom – and a step toward inner light
     </div>
 
     <h1>Welcome to Horia</h1>
 
     <div class="content">
-      Horia is a philosophy rooted in a better understanding of the world and the human being, and in faith in the One God, named **Hora**.  
-      Hora is the God of truth, light, and justice — the source of all goodness and perfection, who bathes existence in endless light and gives meaning to all things.  
-      God is beyond all mental images, beyond time and space, calling us to the path of love and reason.
-
-      <br><br>
-
-      Horia teaches that the human being is a complex, multi-dimensional creature living through three continuous realms:
-
+      <p>
+        Horia is a spiritual and cultural bridge between humanity’s mystical heritage and its modern humanistic ideals.
+      </p>
+      <p>
+        In today’s world, where the need for personal freedom, collective wisdom, sustainable peace, and harmony with nature is more urgent than ever,
+        Horia seeks to awaken a constructive and universal message in human hearts by reimagining the familiar language and structures of traditional religions.
+      </p>
+      <p>
+        The ultimate aim of Horia is to cultivate the following principles through inner awakening and spiritual experience:
+      </p>
       <ol>
-        <li><strong>The Pre-World:</strong> a spiritual and transcendent realm where the soul was created and from which it has come.</li>
-        <li><strong>The Present World:</strong> the physical, material world — the realm of experience, struggle, and growth.</li>
-        <li><strong>The After-World:</strong> life after death, a stage of further evolution and the continuation of real existence.</li>
+        <li>🌱 Personal freedom grounded in moral conscience</li>
+        <li>🧠 Collective wisdom and compassionate participation (including participatory democracy and shared decision-making)</li>
+        <li>✌️ A culture of peace and global coexistence</li>
+        <li>🌍 Reverence for nature as the body of the Mother of Being</li>
+        <li>🤝 Equality and inherent dignity of all humans, without distinction of gender, race, belief, or language</li>
       </ol>
-
-      Horia emphasizes that humans are bearers of collective reason and responsible for the dignity of themselves and all beings.  
-      It invites us to self-knowledge, to reconnect with the pre-world, and to strive for goodness in the present world in preparation for the world to come.
-
-      <br><br>
-
-      Horia is both a faith and a way of life — one that calls us to self-awareness, peaceful coexistence, and the spread of justice and kindness.  
-      It is a path lit by Hora, leading toward a more human future.
+      <p>
+        Horia believes that when religion is rightfully renewed, it can become a language of awakening and global empathy—not a tool of domination.
+        Therefore, this path draws upon the structural elements of religion (such as prayers, rituals, symbols, sacred calendars, and transcendent ideas),
+        but reimagines them in service of human freedom and awareness.
+      </p>
     </div>
   </main>
 
