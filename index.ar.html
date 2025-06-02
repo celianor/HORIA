@@ -2,120 +2,133 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
-  <title>هوريـا - الصفحة الرئيسية</title>
+  <title>هوريا – دين المحبة والحكمة</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f0f7f0;
+      font-family: 'Vazirmatn', Tahoma, sans-serif;
+      background: linear-gradient(to bottom, #f0f7f0, #e0f2e0);
       margin: 0;
       padding: 0;
-      color: #333;
-      text-align: right;
+      color: #2e7d32;
       direction: rtl;
+      line-height: 1.8;
     }
+
     .lang-bar {
       background-color: #c8e6c9;
-      padding: 0.5rem 0;
+      padding: 0.6rem 1rem;
       display: flex;
       justify-content: center;
-      gap: 1rem;
+      flex-wrap: wrap;
+      gap: 0.8rem;
       position: sticky;
       top: 0;
       z-index: 1000;
       border-bottom: 2px solid #a5d6a7;
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
     }
+
     .lang-bar a {
       color: #2e7d32;
       text-decoration: none;
       font-weight: 600;
-      padding: 0.3rem 0.6rem;
-      border-radius: 4px;
-      white-space: nowrap;
-      transition: color 0.3s ease;
-      font-size: 1rem;
+      padding: 0.4rem 0.8rem;
+      border-radius: 6px;
+      background-color: #e8f5e9;
+      transition: all 0.3s ease;
     }
+
     .lang-bar a:hover {
+      background-color: #a5d6a7;
       color: #1b5e20;
     }
-    @media (max-width: 480px) {
-      .lang-bar {
-        gap: 0.5rem;
-      }
-      .lang-bar a {
-        font-size: 0.85rem;
-        padding: 0.2rem 0.4rem;
-      }
-    }
+
     main {
-      margin: 2rem 1rem;
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
-      color: #4a7d4a;
-      text-align: right;
-      line-height: 1.8;
-      font-size: 1.1rem;
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1.5rem;
+      background-color: #ffffffdd;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 80, 0, 0.1);
     }
+
     h1 {
-      color: #2e7d32;
-      margin-bottom: 0.5rem;
       text-align: center;
+      font-size: 2rem;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      color: #256d2c;
     }
-    p {
-      font-weight: 600;
-      font-size: 1.1rem;
-      line-height: 1.5;
+
+    p.subtext {
+      text-align: center;
+      font-size: 1.2rem;
+      font-weight: 500;
       margin-bottom: 2rem;
-      text-align: center;
+      color: #4a7d4a;
     }
+
     .main-menu {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 1rem;
-      margin-bottom: 2rem;
+      gap: 1.2rem;
+      margin-bottom: 2.5rem;
     }
+
     .main-menu a {
       background-color: #a5d6a7;
       color: #1b5e20;
       text-decoration: none;
-      padding: 1rem 2rem;
-      border-radius: 8px;
+      padding: 1rem 1.8rem;
+      border-radius: 10px;
       font-weight: 700;
-      font-size: 1.1rem;
-      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
-      transition: background-color 0.3s ease;
-      min-width: 140px;
+      font-size: 1.05rem;
+      box-shadow: 0 4px 8px rgba(0, 60, 0, 0.1);
+      transition: all 0.3s ease;
+      min-width: 150px;
+      text-align: center;
     }
+
     .main-menu a:hover {
       background-color: #81c784;
       color: #145214;
     }
-    @media (max-width: 480px) {
-      .main-menu a {
-        font-size: 1rem;
-        padding: 0.8rem 1.5rem;
-        min-width: 120px;
-      }
-    }
+
     .subheader {
       text-align: center;
-      margin-bottom: 2rem;
-      font-size: 1rem;
       font-style: italic;
       color: #388e3c;
+      margin-bottom: 2rem;
     }
+
     .content {
-      margin-top: 2rem;
+      padding: 1rem 0;
+      font-size: 1.05rem;
+      color: #3b5e3b;
     }
-    ol {
-      padding-right: 1.2rem;
+
+    .content ol {
+      padding-right: 1.5rem;
+      margin-top: 1rem;
     }
-    li {
+
+    .content li {
       margin-bottom: 0.8rem;
+      font-weight: 600;
+    }
+
+    @media (max-width: 600px) {
+      .main-menu {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .main-menu a {
+        width: 100%;
+        max-width: 90%;
+      }
     }
   </style>
 </head>
@@ -130,46 +143,47 @@
   </nav>
 
   <main>
-    <h1>دين المحبّة والعقل</h1>
-    <p>هذه دار للرحمة، والعقل، والحرية، والنور.</p>
+    <h1>دين المحبة والحكمة</h1>
+    <p class="subtext">ملاذ للرحمة والعقل والحرية والنور الداخلي</p>
 
     <div class="main-menu">
-      <a href="lightbook/index.ar.html">كتاب النور</a>
-      <a href="lit/index.ar.html">الكتابات</a>
-      <a href="music.html">الموسيقى</a>
-      <a href="Pray/index.ar.html">صلاة</a>
-      <a href="Story/index.ar.html">القصص</a>
-      <a href="contact.ar.html">اتّصال</a>
+      <a href="lightbook/index.ar.html">📖 كتاب النور</a>
+      <a href="lit/index.ar.html">📝 نصوص وكتابات</a>
+      <a href="music.html">🎶 موسيقى</a>
+      <a href="Pray/index.ar.html">🙏 صلوات</a>
+      <a href="Story/index.ar.html">📚 حكايات</a>
+      <a href="contact.ar.html">📩 تواصل</a>
     </div>
 
     <div class="subheader">
-      هنا تجد طريقاً نحو الحكمة، والرحمة، والحرية — خُطوةٌ شُجاعة إلى النور.
+      دربٌ نحو الحكمة والمحبة والحرية – وخطوة نحو النور الكامن فينا
     </div>
 
     <h1>أهلاً بك في هوريا</h1>
 
     <div class="content">
-      هوريا فلسفةٌ مبنيّة على فهمٍ أعمق للعالم والإنسان، وعلى الإيمان بإلهٍ واحد يُدعى "هُرا".  
-      هُرا هو إله الحقيقة، والنور، والعدالة — مصدر كل خير وكمال، يفيض على الوجود بالنور اللامحدود، ويمنحه المعنى.  
-      الله يتجاوز كل صورة ذهنية، وخارج عن الزمان والمكان، يدعونا إلى درب المحبة والعقل.
-
-      <br><br>
-
-      يُعلّم دين هوريا أن الإنسان كائنٌ مركّب، يعيش في ثلاثة عوالم متصلة:
-
+      <p>
+        هوريا جسرٌ روحي وثقافي بين تراث البشرية الصوفي ومثلها الإنسانية الحديثة.
+      </p>
+      <p>
+        في عالمنا المعاصر، حيث الحاجة إلى الحرية الشخصية، والحكمة الجماعية، والسلام المستدام، والانسجام مع الطبيعة أصبحت أكثر إلحاحاً من أي وقت مضى،
+        تسعى هوريا إلى إيقاظ رسالة بنّاءة وعالمية في قلب الإنسان، من خلال إعادة تخيل لغة الأديان التقليدية وهياكلها المألوفة.
+      </p>
+      <p>
+        الهدف النهائي لهوريا هو تنمية المبادئ التالية من خلال الصحوة الداخلية والخبرة الروحية:
+      </p>
       <ol>
-        <li><strong>العالم السابق:</strong> عالمٌ روحي وسابق للوجود، خُلقت فيه الروح، وهو الأصل الأول للكينونة.</li>
-        <li><strong>العالم الحاضر:</strong> العالم المادي — ميدان التجربة والسعي والنمو.</li>
-        <li><strong>العالم اللاحق:</strong> الحياة بعد الموت، امتدادٌ للتطور واستمرارٌ للوجود الحقيقي.</li>
+        <li>🌱 حرية شخصية قائمة على الضمير الأخلاقي</li>
+        <li>🧠 حكمة جماعية ومشاركة متعاطفة (بما يشمل الديمقراطية التشاركية واتخاذ القرار المشترك)</li>
+        <li>✌️ ثقافة سلام وتعايش عالمي</li>
+        <li>🌍 توقير الطبيعة باعتبارها جسد أمّ الوجود</li>
+        <li>🤝 مساواة وكرامة جوهرية لجميع البشر، بلا تمييز في الجنس أو العرق أو العقيدة أو اللغة</li>
       </ol>
-
-      يعلّم هوريا أن البشر مسؤولون عن كرامتهم، وعن كرامة كل حيّ، وأنهم يحملون فيهم نور العقل الجماعي.  
-      يدعونا إلى معرفة أنفسنا، والتواصل مع أصلنا، والعمل على الخير في هذا العالم الحاضر، استعداداً للعالم الآتي.
-
-      <br><br>
-
-      هوريا إيمانٌ ومنهجُ حياة، يدعونا إلى وعي الذات، والتعايش السلمي، ونشر العدل والخير.  
-      هو دربٌ يُضيئهُ هُرا، يقودُ إلى مستقبلٍ أكثر إنسانية.
+      <p>
+        تؤمن هوريا أنّ الدين، حين يُجدَّد بصدق، يمكن أن يصبح لغةً للصحوة والتعاطف العالمي — لا أداة للهيمنة.
+        ولذلك، يستخدم هذا الطريق العناصر الهيكلية للدين (مثل الصلاة والطقوس والرموز والتقويم المقدس والمفاهيم المتعالية)،
+        لكنه يعيد ابتكارها لخدمة الحرية والوعي الإنساني.
+      </p>
     </div>
   </main>
 
