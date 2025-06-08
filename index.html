@@ -109,7 +109,6 @@
   </style>
 </head>
 <body>
-
   <canvas id="lightCanvas"></canvas>
 
   <h1>Welcome to Horia</h1>
@@ -128,18 +127,18 @@
     <a href="https://celianor.github.io/Horia/contact.en.html" class="lang-btn">Contact</a>
   </div>
 
-  <audio id="bg-music" loop autoplay>
+  <audio id="bg-music" preload="auto" loop>
     <source src="https://cdn.pixabay.com/audio/2023/06/25/audio_7d1433d1ac.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
   </audio>
 
   <button id="music-toggle">🔊 Music</button>
 
-  <script>
+  <script defer>
+    // --- Canvas particles ---
     const canvas = document.getElementById('lightCanvas');
     const ctx = canvas.getContext('2d');
     let width, height;
-    let particles = [];
 
     function resizeCanvas() {
       width = canvas.width = window.innerWidth;
@@ -157,50 +156,62 @@
         this.x = Math.random() * width;
         this.y = Math.random() * height;
         this.radius = Math.random() * 1.5 + 0.5;
-        this.alpha = Math.random() * 0.3 + 0.05;
-        this.speed = Math.random() * 0.3 + 0.1;
+        this.alpha = Math.random() * 0.25 + 0.05;
+        this.speed = Math.random() * 0.2 + 0.05;
       }
       update() {
         this.y -= this.speed;
-        if (this.y < 0) this.reset();
+        if (this.y < 0) this.y = height;
       }
       draw() {
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(255, 255, 255, ${this.alpha})`;
+        ctx.fillStyle = `rgba(255,255,255,${this.alpha})`;
         ctx.fill();
       }
     }
 
-    for (let i = 0; i < 120; i++) {
-      particles.push(new Particle());
-    }
+    const particles = Array.from({length: 60}, () => new Particle());
 
     function animate() {
       ctx.clearRect(0, 0, width, height);
-      particles.forEach(p => {
+      for (let p of particles) {
         p.update();
         p.draw();
-      });
+      }
       requestAnimationFrame(animate);
     }
 
     animate();
 
-    // Music control
+    // --- Music control ---
     const music = document.getElementById('bg-music');
     const toggleBtn = document.getElementById('music-toggle');
-    let isPlaying = true;
+    let isPlaying = false;
 
     toggleBtn.addEventListener('click', () => {
       if (isPlaying) {
         music.pause();
         toggleBtn.textContent = '🔇 Music';
       } else {
-        music.play();
-        toggleBtn.textContent = '🔊 Music';
+        music.play().then(() => {
+          toggleBtn.textContent = '🔊 Music';
+        }).catch(err => {
+          console.warn('Autoplay blocked:', err);
+          toggleBtn.textContent = '▶️ Play';
+        });
       }
       isPlaying = !isPlaying;
+    });
+
+    // Try to play on load (some browsers block it)
+    window.addEventListener('load', () => {
+      music.play().then(() => {
+        isPlaying = true;
+      }).catch(() => {
+        toggleBtn.textContent = '▶️ Play';
+        isPlaying = false;
+      });
     });
   </script>
 </body>
