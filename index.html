@@ -32,7 +32,7 @@
 
     @keyframes lightMove {
       0% { transform: translate(0, 0); }
-      50% { transform: translate(50px, 30px); }
+      50% { transform: translate(60px, 40px); }
       100% { transform: translate(0, 0); }
     }
 
@@ -95,32 +95,13 @@
       background-color: #66bb6a;
       transform: scale(1.05);
     }
-
-    #music-toggle {
-      position: fixed;
-      bottom: 20px;
-      left: 20px;
-      background: #66bb6a;
-      color: white;
-      border: none;
-      border-radius: 30px;
-      padding: 10px 20px;
-      font-size: 1rem;
-      font-weight: bold;
-      cursor: pointer;
-      z-index: 10;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    }
-
-    #music-toggle:hover {
-      background: #4caf50;
-    }
   </style>
 </head>
 <body>
   <div class="light-overlay"></div>
 
   <h1>Welcome to Horia</h1>
+
   <div class="header-image-container">
     <img src="header-image.jpg" alt="Children in rose garden at sunrise">
   </div>
@@ -135,34 +116,5 @@
     <a href="index.fa.html" class="lang-btn">فارسی</a>
     <a href="https://celianor.github.io/Horia/contact.en.html" class="lang-btn">Contact</a>
   </div>
-
-  <audio id="bg-music" preload="auto" loop>
-    <source src="https://cdn.pixabay.com/audio/2023/06/25/audio_7d1433d1ac.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-  </audio>
-
-  <button id="music-toggle">🔊 Music</button>
-
-  <script>
-    const music = document.getElementById('bg-music');
-    const toggleBtn = document.getElementById('music-toggle');
-    let isPlaying = false;
-
-    toggleBtn.addEventListener('click', () => {
-      if (isPlaying) {
-        music.pause();
-        toggleBtn.textContent = '🔇 Music';
-      } else {
-        music.play().then(() => {
-          toggleBtn.textContent = '🔊 Music';
-          isPlaying = true;
-        }).catch(err => {
-          console.warn("Autoplay blocked");
-          toggleBtn.textContent = '▶️ Play';
-        });
-      }
-      isPlaying = !isPlaying;
-    });
-  </script>
 </body>
 </html>
