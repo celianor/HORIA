@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Welcome to Horia</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #a8e6cf, #dcedc1);
+      color: #2e7d32;
+      text-align: center;
+      padding: 20px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    canvas {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    .header-image-container {
+      max-width: 900px;
+      margin: 0 auto 40px;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+      border: 4px solid #a5d6a7;
+      filter: brightness(1.05) contrast(1.1) saturate(1.2) sepia(10%);
+      transition: filter 0.5s ease;
+    }
+
+    .header-image-container:hover {
+      filter: brightness(1.1) contrast(1.2) saturate(1.4) sepia(20%);
+    }
+
+    .header-image-container img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.3rem;
+      max-width: 400px;
+      margin: 0 auto 40px;
+      font-weight: 500;
+    }
+
+    .language-selector {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .lang-btn {
+      flex: 1 1 120px;
+      padding: 15px 0;
+      border-radius: 12px;
+      background-color: #81c784;
+      color: white;
+      font-weight: 700;
+      text-decoration: none;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      user-select: none;
+    }
+
+    .lang-btn:hover {
+      background-color: #66bb6a;
+      transform: scale(1.05);
+    }
+
+    #music-toggle {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      background: #66bb6a;
+      color: white;
+      border: none;
+      border-radius: 30px;
+      padding: 10px 20px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      z-index: 10;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    #music-toggle:hover {
+      background: #4caf50;
+    }
+  </style>
+</head>
+<body>
+
+  <canvas id="lightCanvas"></canvas>
+
+  <h1>Welcome to Horia</h1>
+  <div class="header-image-container">
+    <img src="header-image.jpg" alt="Children in rose garden at sunrise">
+  </div>
+
+  <p>A home for kindness, wisdom, freedom, and light.</p>
+
+  <div class="language-selector">
+    <a href="index.en.html" class="lang-btn">English</a>
+    <a href="index.fr.html" class="lang-btn">Français</a>
+    <a href="index.es.html" class="lang-btn">Español</a>
+    <a href="index.ar.html" class="lang-btn">العربية</a>
+    <a href="index.fa.html" class="lang-btn">فارسی</a>
+    <a href="https://celianor.github.io/Horia/contact.en.html" class="lang-btn">Contact</a>
+  </div>
+
+  <audio id="bg-music" loop autoplay>
+    <source src="https://cdn.pixabay.com/audio/2023/06/25/audio_7d1433d1ac.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <button id="music-toggle">🔊 Music</button>
+
+  <script>
+    const canvas = document.getElementById('lightCanvas');
+    const ctx = canvas.getContext('2d');
+    let width, height;
+    let particles = [];
+
+    function resizeCanvas() {
+      width = canvas.width = window.innerWidth;
+      height = canvas.height = window.innerHeight;
+    }
+
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
+
+    class Particle {
+      constructor() {
+        this.reset();
+      }
+      reset() {
+        this.x = Math.random() * width;
+        this.y = Math.random() * height;
+        this.radius = Math.random() * 1.5 + 0.5;
+        this.alpha = Math.random() * 0.3 + 0.05;
+        this.speed = Math.random() * 0.3 + 0.1;
+      }
+      update() {
+        this.y -= this.speed;
+        if (this.y < 0) this.reset();
+      }
+      draw() {
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(255, 255, 255, ${this.alpha})`;
+        ctx.fill();
+      }
+    }
+
+    for (let i = 0; i < 120; i++) {
+      particles.push(new Particle());
+    }
+
+    function animate() {
+      ctx.clearRect(0, 0, width, height);
+      particles.forEach(p => {
+        p.update();
+        p.draw();
+      });
+      requestAnimationFrame(animate);
+    }
+
+    animate();
+
+    // Music control
+    const music = document.getElementById('bg-music');
+    const toggleBtn = document.getElementById('music-toggle');
+    let isPlaying = true;
+
+    toggleBtn.addEventListener('click', () => {
+      if (isPlaying) {
+        music.pause();
+        toggleBtn.textContent = '🔇 Music';
+      } else {
+        music.play();
+        toggleBtn.textContent = '🔊 Music';
+      }
+      isPlaying = !isPlaying;
+    });
+  </script>
+</body>
+</html>
