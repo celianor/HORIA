@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>النداءات النورانية</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: 'Amiri', serif;
+      background-color: #fffef5;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    /* زبان‌ها: چپ به راست */
+    .lang-bar {
+      direction: ltr;
+      background-color: #c8e6c9;
+      padding: 0.6rem 1rem;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      border-bottom: 2px solid #a5d6a7;
+    }
+
+    .lang-bar a {
+      color: #2e7d32;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 0.4rem 0.8rem;
+      background-color: #e8f5e9;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+    }
+
+    .lang-bar a:hover {
+      background-color: #a5d6a7;
+      color: #1b5e20;
+    }
+
+    /* تصویر بالای صفحه */
+    .banner {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-bottom: 4px solid #a5d6a7;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    header {
+      text-align: center;
+      margin: 2rem auto 1rem;
+    }
+
+    header h1 {
+      font-size: 2.2rem;
+      color: #4e342e;
+    }
+
+    .links {
+      max-width: 700px;
+      margin: 2rem auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+      padding: 0 1rem 2rem;
+    }
+
+    .links a {
+      background-color: #fff8e1;
+      border: 1px solid #ffe082;
+      padding: 1rem;
+      border-radius: 10px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 1.1rem;
+      color: #5d4037;
+      transition: background 0.3s ease;
+    }
+
+    .links a:hover {
+      background-color: #ffecb3;
+    }
+
+    /* زمینه‌ی نماد محو ☘️ در پایین صفحه */
+    body::after {
+      content: "/";
+      font-size: 120px;
+      color: #c8e6c955;
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      z-index: 0;
+      pointer-events: none;
+      transform: rotate(-15deg);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- نوار زبان -->
+  <nav class="lang-bar">
+    <a href="https://celianor.github.io/Horia/index.en.html">English</a>
+    <a href="https://celianor.github.io/Horia/index.fr.html">Français</a>
+    <a href="https://celianor.github.io/Horia/index.es.html">Español</a>
+    <a href="https://celianor.github.io/Horia/index.ar.html">العربية</a>
+    <a href="https://celianor.github.io/Horia/index.fa.html">فارسی</a>
+  </nav>
+
+  <!-- تصویر -->
+  <img src="https://celianor.github.io/Horia/img/Ciel.jpg" alt="النداءات النورانية" class="banner">
+
+  <!-- عنوان -->
+  <header>
+    <h1>النداءات النورانية</h1>
+  </header>
+
+  <!-- پیوندها -->
+  <section class="links">
+    <a href="neda1.ar.html">النداء الأول: نشيد البداية</a>
+    <a href="neda2.ar.html">النداء الثاني: الأيام الأولى</a>
+    <a href="neda3.ar.html">النداء الثالث: الآن، مرآتك</a>
+    <a href="neda4.ar.html">النداء الرابع: ما وراء الممر</a>
+    <a href="neda5.ar.html">النداء الخامس: الخطأ والخير</a>
+    <a href="neda6.ar.html">النداء السادس: المحبة، الحكمة، واتحاد القلوب</a>
+    <a href="neda7.ar.html">النداء السابع: الحرية، الأمانة العظيمة</a>
+    </section>
+
+</body>
+</html>
