@@ -4,61 +4,79 @@
   <meta charset="UTF-8">
   <title>Song of Harmony and Voice | Horia</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Vazirmatn', sans-serif;
-      background-color: #fdfaf5;
-      color: #333;
-      margin: 0;
-      padding: 0;
-      line-height: 2;
-    }
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+  body {
+    font-family: 'Vazirmatn', sans-serif;
+    background-color: #fdfaf5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 2;
+  }
 
-    header {
-      background-color: #e6f0f3;
-      padding: 1rem;
-      text-align: center;
-    }
+  header {
+    background-color: #e6f0f3;
+    padding: 1rem;
+    text-align: center;
+  }
 
-    nav a {
-      text-decoration: none;
-      color: #2a4d69;
-      background-color: #d2e4ea;
-      padding: 0.5rem 1rem;
-      margin: 0 0.5rem;
-      border-radius: 6px;
-      font-weight: 500;
-      transition: 0.3s;
-    }
+  nav a {
+    text-decoration: none;
+    color: #2a4d69;
+    background-color: #d2e4ea;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: 0.3s;
+  }
 
-    nav a:hover {
-      background-color: #b8d6de;
-    }
+  nav a:hover {
+    background-color: #b8d6de;
+  }
 
+  main {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 1rem 1.5rem; /* ↑ padding چپ و راست بیشتر برای جلوگیری از چسبیدن متن */
+    box-sizing: border-box;
+  }
+
+  h2 {
+    text-align: center;
+    color: #1c2b36;
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+  }
+
+  p {
+    margin-bottom: 1.8rem;
+    text-align: justify;
+    white-space: pre-line;
+  }
+
+  strong {
+    color: #2a4d69;
+  }
+
+  /* --- Responsive برای موبایل --- */
+  @media (max-width: 600px) {
     main {
-      max-width: 900px;
-      margin: 2rem auto;
-      padding: 1rem;
+      padding: 1.5rem 1.2rem;
     }
 
     h2 {
-      text-align: center;
-      color: #1c2b36;
-      font-size: 1.6rem;
-      margin-bottom: 2rem;
+      font-size: 1.4rem;
     }
 
-    p {
-      margin-bottom: 1.8rem;
-      text-align: justify;
-      white-space: pre-line;
+    nav a {
+      display: inline-block;
+      margin: 0.3rem 0.4rem;
+      font-size: 0.95rem;
     }
-
-    strong {
-      color: #2a4d69;
-    }
-  </style>
+  }
+</style>
 </head>
 <body>
 
