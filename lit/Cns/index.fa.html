@@ -2,69 +2,81 @@
 <html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <title> پند هوریا </title>
+  <title>پند هوریا</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     body {
       font-family: 'Vazirmatn', sans-serif;
-      background-color: #f7f7f0;
+      background: linear-gradient(to bottom, #f0f4f8, #e6f0e6);
       margin: 0;
-      padding: 2rem;
-      color: #333;
+      padding: 2rem 1rem;
+      color: #2e3b3e;
     }
 
     .lang-bar {
-      background-color: #c8e6c9;
-      padding: 0.5rem 0;
+      background-color: #d0e8e2;
+      padding: 0.7rem 0;
       display: flex;
       justify-content: center;
-      gap: 1rem;
-      border-bottom: 2px solid #a5d6a7;
+      gap: 1.5rem;
+      border-bottom: 2px solid #9ac8bc;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
     }
 
     .lang-bar a {
-      color: #2e7d32;
+      color: #255e57;
       text-decoration: none;
-      font-weight: 600;
+      font-weight: 700;
       font-size: 1rem;
+      transition: color 0.3s;
     }
 
     .lang-bar a:hover {
-      color: #1b5e20;
+      color: #0d3c36;
     }
 
     header {
       text-align: center;
-      margin-bottom: 2rem;
+      margin-bottom: 2.5rem;
     }
 
     header h1 {
-      font-size: 2rem;
-      color: #4e342e;
+      font-size: 2.2rem;
+      color: #3c2f2f;
+      text-shadow: 1px 1px 1px rgba(0,0,0,0.05);
     }
 
     .links {
-      max-width: 600px;
+      max-width: 700px;
       margin: auto;
-      display: flex;
-      flex-direction: column;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
       gap: 1.2rem;
     }
 
     .links a {
-      background-color: #ebede4;
-      border: 1px solid #a9e38an;
+      background-color: #ffffffcc;
+      border: 1px solid #bdd8c6;
       padding: 1rem;
-      border-radius: 8px;
+      border-radius: 12px;
       text-align: center;
       text-decoration: none;
       font-size: 1.1rem;
-      color: #5d4037;
-      transition: background 0.3s ease;
+      color: #3e403e;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
     }
 
     .links a:hover {
-      background-color: #e8e1e8;
+      background-color: #f5fcf8;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    @media (max-width: 600px) {
+      .links {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
@@ -76,24 +88,20 @@
   </nav>
 
   <header>
-    <h1> پند هوریا </h1>
-    <p>  </p>
+    <h1>پند هوریا</h1>
   </header>
 
   <section class="links">
-    <a href="S1.fa.html"> </a>
-    <a href="S2.fa.html">  </a>
-    <a href="S3.fa.html">   </a>
-    <a href="S4.fa.html">   </a>
-    <a href="S5.fa.html"> </a>
-    <a href="S6.fa.html">   </a>
-    <a href="S7.fa.html">  </a> 
-    <a href="S8.fa.html">  </a>
-    <a href="S9.fa.html">  </a>
-    <a href="S10.fa.html"> </a>
-
-
-
+    <a href="S1.fa.html">پند </a>
+    <a href="S2.fa.html">پند </a>
+    <a href="S3.fa.html">پند </a>
+    <a href="S4.fa.html">پند </a>
+    <a href="S5.fa.html">پند </a>
+    <a href="S6.fa.html">پند </a>
+    <a href="S7.fa.html">پند </a>
+    <a href="S8.fa.html">پند </a>
+    <a href="S9.fa.html">پند </a>
+    <a href="S10.fa.html">پند </a>
   </section>
 
 </body>
