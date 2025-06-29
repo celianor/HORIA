@@ -1,118 +1,161 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Les Vingt Assemblées avec Horia</title>
-    <style>
-        body {
-            font-family: "Tahoma", sans-serif;
-            direction: ltr;
-            margin: 2rem;
-            background-color: #f9f9f9;
-            color: #333;
-        }
-        h1 {
-            text-align: center;
-            color: #2c3e50;
-        }
-        p.intro {
-            max-width: 600px;
-            margin: 1rem auto 2rem auto;
-            font-size: 1.2rem;
-            line-height: 1.5;
-            color: #444;
-            text-align: center;
-        }
-        .nav-links {
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-        .nav-links a {
-            margin: 0 1rem;
-            text-decoration: none;
-            color: #1565c0;
-            font-weight: bold;
-        }
-        ul.gam-list {
-            max-width: 500px;
-            margin: 0 auto;
-            padding: 0;
-            list-style: none;
-        }
-        ul.gam-list li {
-            background: #e3f2fd;
-            margin: 0.4rem 0;
-            padding: 0.8rem 1rem;
-            border-radius: 6px;
-            transition: background-color 0.3s;
-        }
-        ul.gam-list li:hover {
-            background: #bbdefb;
-        }
-        ul.gam-list li a {
-            color: #1565c0;
-            text-decoration: none;
-            font-weight: bold;
-            display: block;
-        }
-        ul.gam-list li a:hover {
-            text-decoration: underline;
-        }
-        footer {
-            text-align: center;
-            margin-top: 3rem;
-            color: #777;
-            font-size: 0.9rem;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Les Vingt Assemblées avec Horia</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(to right, #f1f4f9, #e8f0fe);
+      margin: 0;
+      padding: 2rem;
+      color: #333;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      color: #2e3b55;
+      margin-bottom: 1rem;
+    }
+
+    p.intro {
+      max-width: 700px;
+      margin: 0 auto 2rem auto;
+      font-size: 1.15rem;
+      line-height: 1.6;
+      color: #555;
+      text-align: center;
+    }
+
+    .nav-links {
+      text-align: center;
+      margin: 1.5rem 0;
+    }
+
+    .nav-links a {
+      display: inline-block;
+      margin: 0 1rem;
+      padding: 0.5rem 1rem;
+      text-decoration: none;
+      color: #fff;
+      background-color: #5c6bc0;
+      border-radius: 25px;
+      font-weight: 600;
+      transition: background-color 0.3s;
+    }
+
+    .nav-links a:hover {
+      background-color: #3f51b5;
+    }
+
+    ul.gam-list {
+      max-width: 600px;
+      margin: 2rem auto;
+      padding: 0;
+      list-style: none;
+    }
+
+    ul.gam-list li {
+      background: #ffffff;
+      margin: 0.6rem 0;
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      transition: transform 0.2s, box-shadow 0.3s;
+    }
+
+    ul.gam-list li:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    }
+
+    ul.gam-list li a {
+      color: #3949ab;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.05rem;
+      display: block;
+    }
+
+    ul.gam-list li a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 4rem;
+      padding-top: 1rem;
+      font-size: 0.9rem;
+      color: #888;
+      border-top: 1px solid #ddd;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      .nav-links a {
+        display: block;
+        margin: 0.5rem auto;
+        width: 80%;
+      }
+
+      ul.gam-list {
+        padding: 0 1rem;
+      }
+    }
+  </style>
 </head>
 <body>
 
-  ‏  <div class="nav-links">
-‏        <a href="https://celianor.github.io/Horia/index.fr.html">Accueil</a>
-‏        <a href="https://celianor.github.io/Horia/lit/index.fr.html">Page précédente</a>
-    </div>
+  <div class="nav-links">
+    <a href="https://celianor.github.io/Horia/index.fr.html">Accueil</a>
+    <a href="https://celianor.github.io/Horia/lit/index.fr.html">Page précédente</a>
+  </div>
 
-    <h1>Les Vingt Assemblées avec Horia</h1>
+  <h1>Les Vingt Assemblées avec Horia</h1>
 
-    <p class="intro">
-        Rejoignons Horia.<br />
-        Ici, on pose les grandes questions de la vie — et on écoute les réponses du cœur.<br />
-        Chaque assemblée est un pas vers la lumière, la liberté et le lien véritable.<br /><br />
-        Ensemble, tissons un monde nouveau, rempli de clarté et d’amour.
-    </p>
+  <p class="intro">
+    Rejoignons Horia.<br />
+    Ici, on pose les grandes questions de la vie — et on écoute les réponses du cœur.<br />
+    Chaque assemblée est un pas vers la lumière, la liberté et le lien véritable.<br /><br />
+    Ensemble, tissons un monde nouveau, rempli de clarté et d’amour.
+  </p>
 
-    <ul class="gam-list">
-        <li><a href="g1.fr.html">Assemblée I : Sur Dieu et l’humain</a></li>
-        <li><a href="g2.fr.html">Assemblée II : Sur l’homme, la liberté et la faute</a></li>
-        <li><a href="g3.fr.html">Assemblée III : Sur le doute, la foi, et l’union du cœur et de la raison</a></li>
-        <li><a href="g4.fr.html">Assemblée IV : Sur la création et le mystère de l’existence</a></li>
-        <li><a href="g5.fr.html">Assemblée V : Sur la loi, la morale et la conscience</a></li>
-        <li><a href="g6.fr.html">Assemblée VI : Sur la mort, la libération et le destin de l’âme</a></li>
-        <li><a href="g7.fr.html">Assemblée VII : Sur la vérité, et les multiples chemins</a></li>
-        <li><a href="g8.fr.html">Assemblée VIII : Sur la liberté, le libre arbitre, et le lien avec Dieu</a></li>
-        <li><a href="g9.fr.html">Assemblée IX : Sur l’amour, ce mystère infini</a></li>
-        <li><a href="g10.fr.html">Assemblée X : Sur l’avenir de l’humanité et l’espérance éternelle</a></li>
-        <li><a href="g11.fr.html">Assemblée XI : Sur le bien et les chemins de la régénération</a></li>
-        <li><a href="g12.fr.html">Assemblée XII : Sur la sagesse et la clarté du cœur</a></li>
-        <li><a href="g13.fr.html">Assemblée XIII : Sur la compassion et l’unité des âmes</a></li>
-        <li><a href="g14.fr.html">Assemblée XIV : Sur l’ouverture du cœur et de l’esprit, et l’art d’écouter le monde</a></li>
-        <li><a href="g15.fr.html">Assemblée XV : Sur la beauté, la création et l’épanouissement de l’âme</a></li>
-        <li><a href="g16.fr.html">Assemblée XVI : Sur le jeu de la vie et l’enfant sacré en nous</a></li>
-        <li><a href="g17.fr.html">Assemblée XVII : Sur le silence et la profondeur du calme</a></li>
-        <li><a href="g18.fr.html">Assemblée XVIII : Sur le corps, la terre, et notre lien au monde matériel</a></li>
-        <li><a href="g19.fr.html">Assemblée XIX : Sur le temps, et l’art de vivre l’instant</a></li>
-        <li><a href="g20.fr.html">Assemblée XX : Sur la mort, et la continuité de l’âme</a></li>
-    </ul>
+  <ul class="gam-list">
+    <li><a href="g1.fr.html">Assemblée I : Sur Dieu et l’humain</a></li>
+    <li><a href="g2.fr.html">Assemblée II : Sur l’homme, la liberté et la faute</a></li>
+    <li><a href="g3.fr.html">Assemblée III : Sur le doute, la foi, et l’union du cœur et de la raison</a></li>
+    <li><a href="g4.fr.html">Assemblée IV : Sur la création et le mystère de l’existence</a></li>
+    <li><a href="g5.fr.html">Assemblée V : Sur la loi, la morale et la conscience</a></li>
+    <li><a href="g6.fr.html">Assemblée VI : Sur la mort, la libération et le destin de l’âme</a></li>
+    <li><a href="g7.fr.html">Assemblée VII : Sur la vérité, et les multiples chemins</a></li>
+    <li><a href="g8.fr.html">Assemblée VIII : Sur la liberté, le libre arbitre, et le lien avec Dieu</a></li>
+    <li><a href="g9.fr.html">Assemblée IX : Sur l’amour, ce mystère infini</a></li>
+    <li><a href="g10.fr.html">Assemblée X : Sur l’avenir de l’humanité et l’espérance éternelle</a></li>
+    <li><a href="g11.fr.html">Assemblée XI : Sur le bien et les chemins de la régénération</a></li>
+    <li><a href="g12.fr.html">Assemblée XII : Sur la sagesse et la clarté du cœur</a></li>
+    <li><a href="g13.fr.html">Assemblée XIII : Sur la compassion et l’unité des âmes</a></li>
+    <li><a href="g14.fr.html">Assemblée XIV : Sur l’ouverture du cœur et de l’esprit, et l’art d’écouter le monde</a></li>
+    <li><a href="g15.fr.html">Assemblée XV : Sur la beauté, la création et l’épanouissement de l’âme</a></li>
+    <li><a href="g16.fr.html">Assemblée XVI : Sur le jeu de la vie et l’enfant sacré en nous</a></li>
+    <li><a href="g17.fr.html">Assemblée XVII : Sur le silence et la profondeur du calme</a></li>
+    <li><a href="g18.fr.html">Assemblée XVIII : Sur le corps, la terre, et notre lien au monde matériel</a></li>
+    <li><a href="g19.fr.html">Assemblée XIX : Sur le temps, et l’art de vivre l’instant</a></li>
+    <li><a href="g20.fr.html">Assemblée XX : Sur la mort, et la continuité de l’âme</a></li>
+  </ul>
 
-    ‏  <div class="nav-links">
-‏        <a href="https://celianor.github.io/Horia/index.fr.html">Accueil</a>
-‏        <a href="https://celianor.github.io/Horia/lit/index.fr.html">Page précédente</a>
-      </div>
+  <div class="nav-links">
+    <a href="https://celianor.github.io/Horia/index.fr.html">Accueil</a>
+    <a href="https://celianor.github.io/Horia/lit/index.fr.html">Page précédente</a>
+  </div>
 
-    <footer>
-        &copy; 2025 Horia | Tous droits réservés
-    </footer>
+  <footer>
+    &copy; 2025 Horia | Tous droits réservés
+  </footer>
 </body>
 </html>
